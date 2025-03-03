@@ -1,0 +1,84 @@
+{
+  "resourceType": "ValueSet",
+  "id": "f8390160-a5b9-4053-a279-aedb90c1ec19",
+  "url": "https://dotbase.org/fhir/ValueSet/f8390160-a5b9-4053-a279-aedb90c1ec19",
+  "name": "antwortoption-difficulty-level-english",
+  "title": "Antwortoption: difficulty level - English",
+  "status": "active",
+  "experimental": false,
+  "description": "Antwortoption: difficulty level",
+  "compose": {
+    "include": [
+      {
+        "system": "https://dotbase.org/fhir/CodeSystem/e3bcf578-6a02-42fc-b2b3-dcd18ec2068",
+        "concept": [
+          {
+            "code": "LA13921-4",
+            "display": "Without any difficulty",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "5"
+              }
+            ]
+          },
+          {
+            "code": "LA13918-0",
+            "display": "With a little difficulty",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "4"
+              }
+            ]
+          },
+          {
+            "code": "LA13920-6",
+            "display": "With some difficulty",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "3"
+              }
+            ]
+          },
+          {
+            "code": "LA13919-8",
+            "display": "With much difficulty",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "2"
+              }
+            ]
+          },
+          {
+            "code": "LA13912-3",
+            "display": "Unable to do",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

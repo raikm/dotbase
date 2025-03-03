@@ -1,0 +1,84 @@
+{
+  "resourceType": "ValueSet",
+  "id": "5248159c-018c-4220-9acb-7591492f7362",
+  "url": "https://dotbase.org/fhir/ValueSet/5248159c-018c-4220-9acb-7591492f7362",
+  "name": "promis-answeroptions-sleep-quality-5-to-1-english",
+  "title": "PROMIS Answeroptions: sleep quality (5 to 1) - English",
+  "status": "active",
+  "experimental": false,
+  "description": "Answeroptions: sleep quality (5 to 1)",
+  "compose": {
+    "include": [
+      {
+        "system": "https://dotbase.org/fhir/CodeSystem/28b82374-4bcf-45cc-96c3-e9e449fee569",
+        "concept": [
+          {
+            "code": "LA9615-1",
+            "display": "Very poor",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "5"
+              }
+            ]
+          },
+          {
+            "code": "LA8969-3",
+            "display": "Poor",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "4"
+              }
+            ]
+          },
+          {
+            "code": "LA8968-5",
+            "display": "Fair",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "3"
+              }
+            ]
+          },
+          {
+            "code": "LA8967-7",
+            "display": "Good",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "2"
+              }
+            ]
+          },
+          {
+            "code": "LA13913-1",
+            "display": "Very good",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

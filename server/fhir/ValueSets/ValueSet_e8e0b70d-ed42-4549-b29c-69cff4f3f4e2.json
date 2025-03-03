@@ -1,0 +1,84 @@
+{
+  "resourceType": "ValueSet",
+  "id": "e8e0b70d-ed42-4549-b29c-69cff4f3f4e2",
+  "url": "https://dotbase.org/fhir/ValueSet/e8e0b70d-ed42-4549-b29c-69cff4f3f4e2",
+  "name": "answeroptions-level-of-fatigue-1-to-5",
+  "title": "Answeroptions: level of fatigue (1 to 5)",
+  "status": "active",
+  "experimental": false,
+  "description": "Answeroptions: level of fatigue (1 to 5)",
+  "compose": {
+    "include": [
+      {
+        "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
+        "concept": [
+          {
+            "code": "LA6568-5",
+            "display": "Not at all",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "1"
+              }
+            ]
+          },
+          {
+            "code": "LA13863-8",
+            "display": "A little bit",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "2"
+              }
+            ]
+          },
+          {
+            "code": "LA13909-9",
+            "display": "Somewhat",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "3"
+              }
+            ]
+          },
+          {
+            "code": "LA13902-4",
+            "display": "Quite a bit",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "4"
+              }
+            ]
+          },
+          {
+            "code": "LA13914-9",
+            "display": "Very much",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

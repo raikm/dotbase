@@ -1,0 +1,84 @@
+{
+  "resourceType": "ValueSet",
+  "id": "30361213-e632-48ba-a9f0-aab218bcb5c2",
+  "url": "https://dotbase.org/fhir/ValueSet/30361213-e632-48ba-a9f0-aab218bcb5c2",
+  "name": "ability-to-participate-1-to-5-english",
+  "title": "ability to participate (1 to 5) - English",
+  "status": "active",
+  "experimental": false,
+  "description": "ability to participate (1 to 5)",
+  "compose": {
+    "include": [
+      {
+        "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
+        "concept": [
+          {
+            "code": "LA6270-8",
+            "display": "Never",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "1"
+              }
+            ]
+          },
+          {
+            "code": "LA10066-1",
+            "display": "Rarely",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "2"
+              }
+            ]
+          },
+          {
+            "code": "LA10082-8",
+            "display": "Sometimes",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "3"
+              }
+            ]
+          },
+          {
+            "code": "LA10044-8",
+            "display": "Usually",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "4"
+              }
+            ]
+          },
+          {
+            "code": "LA9933-8",
+            "display": "Always",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

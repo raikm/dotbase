@@ -1,0 +1,36 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+coverage
+dot-base
+
+# Node dependencies
+node_modules
+.npm_cache
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example
+.direnv
+
+*storybook.log
+storybook-static
+.nuxt-storybook
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

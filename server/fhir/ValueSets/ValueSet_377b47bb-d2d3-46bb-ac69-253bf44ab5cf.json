@@ -1,0 +1,162 @@
+{
+  "resourceType": "ValueSet",
+  "id": "377b47bb-d2d3-46bb-ac69-253bf44ab5cf",
+  "url": "https://dotbase.org/fhir/ValueSet/377b47bb-d2d3-46bb-ac69-253bf44ab5cf",
+  "name": "answeroptions-pain-intensity-scale-0-10",
+  "title": "Antwortoptions: Pain Intensity Scale 0-10",
+  "status": "active",
+  "experimental": false,
+  "description": "Antwortoptions: Pain Intensity Scale 0-10",
+  "compose": {
+    "include": [
+      {
+        "system": "https://dotbase.org/fhir/CodeSystem/7a3c3c0c-0090-490d-8a41-152d670658a1",
+        "concept": [
+          {
+            "code": "LA19102-5",
+            "display": "no pain",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "code": "LA6112-2",
+            "display": "1",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "1"
+              }
+            ]
+          },
+          {
+            "code": "LA6113-0",
+            "display": "2",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "2"
+              }
+            ]
+          },
+          {
+            "code": "LA6114-8",
+            "display": "3",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "3"
+              }
+            ]
+          },
+          {
+            "code": "LA6115-5",
+            "display": "4",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "4"
+              }
+            ]
+          },
+          {
+            "code": "LA10137-0",
+            "display": "5",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "5"
+              }
+            ]
+          },
+          {
+            "code": "LA10138-8",
+            "display": "6",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "6"
+              }
+            ]
+          },
+          {
+            "code": "LA10139-6",
+            "display": "7",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "7"
+              }
+            ]
+          },
+          {
+            "code": "LA10140-4",
+            "display": "8",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "8"
+              }
+            ]
+          },
+          {
+            "code": "LA10141-2",
+            "display": "9",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "9"
+              }
+            ]
+          },
+          {
+            "code": "LA21948-7",
+            "display": "worst pain imaginable",
+            "designation": [
+              {
+                "use": {
+                  "system": "https://dotbase.org/fhir/NamingSystem/score",
+                  "code": "score"
+                },
+                "value": "10"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
