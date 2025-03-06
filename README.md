@@ -110,3 +110,5 @@ A **T-score** is a standardized score that indicates how a person's health score
 - **T-score below 50** = **Worse** health compared to the average population.
 
 The standard deviation of **10** means that about **68%** of the general population will have scores between **40 and 60**, assuming a normal distribution.
+
+Scoring tables for the original PROMIS-29 can be found here (https://www.healthmeasures.net/images/PROMIS/manuals/PROMIS_Adult_Profile_Scoring_Manual.pdf).
