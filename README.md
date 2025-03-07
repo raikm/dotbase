@@ -66,7 +66,7 @@ Your task is to render a Radar Chart using the provided responses to the PROMIS-
 ### Hints and Tips
 
 1. You don't have to match the design of the example 100%
-2. **🛑 TODO Beware when mapping the🛑**
+2. Beware of the scales used for the different domains. Better health is located in the center of the chart and worse health on the outside, independent of whether good health is represented by a high or a low value.
 3. Make use of Nuxt utility functions, such as [`useFetch`](https://nuxt.com/docs/api/composables/use-fetch).
 4. Have fun 🥳
 
@@ -91,7 +91,7 @@ Beyond the code itself we want to see if you can work autonomously and research 
 
 The PROMIS-33 (Patient-Reported Outcomes Measurement Information System-33) is a validated **questionnaire** designed to assess **health-related quality of life** of patients. It consists of **33 items** covering multiple domains of physical, mental, and social health.
 
-1. **Physical Function** – Measures mobility, strength, and ability to perform daily activities.
+1. **Physical Function** (inverted) – Measures mobility, strength, and ability to perform daily activities.
 2. **Pain Interference** – Assesses how pain affects daily life.
 3. **Fatigue** – Evaluates the severity and impact of fatigue.
 4. **Depression** – Measures emotional distress and depressive symptoms.
@@ -101,14 +101,14 @@ The PROMIS-33 (Patient-Reported Outcomes Measurement Information System-33) is a
 
 #### Scoring of PROMIS-33
 
-The PROMIS-33 is scored using a **T-score** system. This allows results to be compared across different patient populations, conditions, and even different PROMIS domains. Here's how it works:
+The individual answers are summed up for each domain and then converted into a T-score using a table.
 
-A **T-score** is a standardized score that indicates how a person's health score compares to the general population. The **T-score scale** is based on a population mean of **50** with a standard deviation of **10**. This means:
+A **T-score** indicates how a person's health score compares to the general population. The T-score scale is based on a **population mean** of **50**. This means:
 
 - **T-score of 50** = **Average** for the general population.
-- **T-score above 50** = **Better** health compared to the average population.
-- **T-score below 50** = **Worse** health compared to the average population.
+- **T-score above 50** = **Better** health compared to the average population in case of Physical Function and **worse** health for all other domains.
+- **T-score below 50** = **Worse** health compared to the average population in case of Physical Function and **better** health for all other domains.
 
-The standard deviation of **10** means that about **68%** of the general population will have scores between **40 and 60**, assuming a normal distribution.
+Scoring tables for the original PROMIS-29 can be found [here](https://www.healthmeasures.net/images/PROMIS/manuals/PROMIS_Adult_Profile_Scoring_Manual.pdf).
 
-Scoring tables for the original PROMIS-29 can be found here (https://www.healthmeasures.net/images/PROMIS/manuals/PROMIS_Adult_Profile_Scoring_Manual.pdf).
+More information: healthmeasures.net
