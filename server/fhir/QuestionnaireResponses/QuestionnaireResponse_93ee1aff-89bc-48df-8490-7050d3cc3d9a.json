@@ -1,20 +1,20 @@
 {
     "resourceType": "QuestionnaireResponse",
-    "id": "19ab45f9-2bfe-47e7-a882-0f6d84f74ee5",
+    "id": "93ee1aff-89bc-48df-8490-7050d3cc3d9a",
     "meta": {
         "extension": [
             {
                 "url": "https://dotbase.org/fhir/StructureDefinition/resource-creation-datetime",
-                "valueDateTime": "2025-03-06T10:23:18.793+00:00"
+                "valueDateTime": "2025-03-07T08:38:26.370+00:00"
             },
             {
                 "url": "https://dotbase.org/fhir/StructureDefinition/resource-creator",
-                "valueCode": "c81c667f-076d-490e-a18a-5f6c82e71599"
+                "valueCode": "9af64397-6de4-484d-a4a8-fb8c57e4223b"
             }
         ],
         "versionId": "1",
-        "lastUpdated": "2025-03-06T10:23:18.786+00:00",
-        "source": "#Ap4nQXmvPSa2Yx4R"
+        "lastUpdated": "2025-03-07T08:38:26.370+00:00",
+        "source": "#S2YBg82wISepqGh5"
     },
     "questionnaire": "https://dotbase.org/fhir/Questionnaire/promis-33-v2-1-english-mobile",
     "_questionnaire": {
@@ -29,9 +29,9 @@
     },
     "status": "completed",
     "subject": {
-        "reference": "Patient/c81c667f-076d-490e-a18a-5f6c82e71599"
+        "reference": "Patient/9af64397-6de4-484d-a4a8-fb8c57e4223b"
     },
-    "authored": "2025-03-06T10:23:18.194366Z",
+    "authored": "2025-03-07T08:38:25.936294Z",
     "author": {
         "type": "Patient"
     },
@@ -53,12 +53,12 @@
                                 "extension": [
                                     {
                                         "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "5"
+                                        "valueString": "2"
                                     }
                                 ],
                                 "system": "https://dotbase.org/fhir/CodeSystem/e3bcf578-6a02-42fc-b2b3-dcd18ec2068",
-                                "code": "LA13921-4",
-                                "display": "Without any difficulty"
+                                "code": "LA13919-8",
+                                "display": "With much difficulty"
                             }
                         }
                     ]
@@ -71,12 +71,12 @@
                                 "extension": [
                                     {
                                         "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "4"
+                                        "valueString": "2"
                                     }
                                 ],
                                 "system": "https://dotbase.org/fhir/CodeSystem/e3bcf578-6a02-42fc-b2b3-dcd18ec2068",
-                                "code": "LA13918-0",
-                                "display": "With a little difficulty"
+                                "code": "LA13919-8",
+                                "display": "With much difficulty"
                             }
                         }
                     ]
@@ -89,12 +89,12 @@
                                 "extension": [
                                     {
                                         "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "3"
+                                        "valueString": "2"
                                     }
                                 ],
                                 "system": "https://dotbase.org/fhir/CodeSystem/e3bcf578-6a02-42fc-b2b3-dcd18ec2068",
-                                "code": "LA13920-6",
-                                "display": "With some difficulty"
+                                "code": "LA13919-8",
+                                "display": "With much difficulty"
                             }
                         }
                     ]
@@ -126,7 +126,7 @@
                     "linkId": "physical-function-t-score",
                     "answer": [
                         {
-                            "valueDecimal": 39.2
+                            "valueDecimal": 31.9
                         }
                     ]
                 }
@@ -143,12 +143,12 @@
                                 "extension": [
                                     {
                                         "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "5"
+                                        "valueString": "4"
                                     }
                                 ],
                                 "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
-                                "code": "LA9933-8",
-                                "display": "Always"
+                                "code": "LA10044-8",
+                                "display": "Usually"
                             }
                         }
                     ]
@@ -161,12 +161,12 @@
                                 "extension": [
                                     {
                                         "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "3"
+                                        "valueString": "2"
                                     }
                                 ],
                                 "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
-                                "code": "LA10082-8",
-                                "display": "Sometimes"
+                                "code": "LA10066-1",
+                                "display": "Rarely"
                             }
                         }
                     ]
@@ -197,12 +197,12 @@
                                 "extension": [
                                     {
                                         "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "4"
+                                        "valueString": "1"
                                     }
                                 ],
                                 "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
-                                "code": "LA10044-8",
-                                "display": "Usually"
+                                "code": "LA6270-8",
+                                "display": "Never"
                             }
                         }
                     ]
@@ -216,7 +216,7 @@
                     "linkId": "anxiety-t-score",
                     "answer": [
                         {
-                            "valueDecimal": 67.3
+                            "valueDecimal": 57.7
                         }
                     ]
                 }
@@ -251,12 +251,12 @@
                                 "extension": [
                                     {
                                         "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "3"
+                                        "valueString": "1"
                                     }
                                 ],
                                 "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
-                                "code": "LA10082-8",
-                                "display": "Sometimes"
+                                "code": "LA6270-8",
+                                "display": "Never"
                             }
                         }
                     ]
@@ -287,12 +287,12 @@
                                 "extension": [
                                     {
                                         "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "4"
+                                        "valueString": "1"
                                     }
                                 ],
                                 "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
-                                "code": "LA10044-8",
-                                "display": "Usually"
+                                "code": "LA6270-8",
+                                "display": "Never"
                             }
                         }
                     ]
@@ -306,7 +306,7 @@
                     "linkId": "depression-t-score",
                     "answer": [
                         {
-                            "valueDecimal": 58.9
+                            "valueDecimal": 49
                         }
                     ]
                 }
@@ -359,12 +359,12 @@
                                 "extension": [
                                     {
                                         "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "3"
+                                        "valueString": "2"
                                     }
                                 ],
                                 "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
-                                "code": "LA13909-9",
-                                "display": "Somewhat"
+                                "code": "LA13863-8",
+                                "display": "A little bit"
                             }
                         }
                     ]
@@ -377,12 +377,12 @@
                                 "extension": [
                                     {
                                         "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "2"
+                                        "valueString": "1"
                                     }
                                 ],
                                 "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
-                                "code": "LA13863-8",
-                                "display": "A little bit"
+                                "code": "LA6568-5",
+                                "display": "Not at all"
                             }
                         }
                     ]
@@ -396,7 +396,7 @@
                     "linkId": "fatigue-t-score",
                     "answer": [
                         {
-                            "valueDecimal": 48.6
+                            "valueDecimal": 43.1
                         }
                     ]
                 }
@@ -413,12 +413,12 @@
                                 "extension": [
                                     {
                                         "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "3"
+                                        "valueString": "5"
                                     }
                                 ],
                                 "system": "https://dotbase.org/fhir/CodeSystem/28b82374-4bcf-45cc-96c3-e9e449fee569",
-                                "code": "LA8968-5",
-                                "display": "Fair"
+                                "code": "LA9615-1",
+                                "display": "Very poor"
                             }
                         }
                     ]
@@ -431,12 +431,12 @@
                                 "extension": [
                                     {
                                         "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "2"
+                                        "valueString": "1"
                                     }
                                 ],
                                 "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
-                                "code": "LA10066-1",
-                                "display": "Rarely"
+                                "code": "LA6270-8",
+                                "display": "Never"
                             }
                         }
                     ]
@@ -486,7 +486,7 @@
                     "linkId": "sleep-disturbance-t-score",
                     "answer": [
                         {
-                            "valueDecimal": 48.4
+                            "valueDecimal": 50.5
                         }
                     ]
                 }
@@ -503,12 +503,12 @@
                                 "extension": [
                                     {
                                         "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "4"
+                                        "valueString": "3"
                                     }
                                 ],
                                 "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
-                                "code": "LA10044-8",
-                                "display": "Usually"
+                                "code": "LA10082-8",
+                                "display": "Sometimes"
                             }
                         }
                     ]
@@ -557,12 +557,12 @@
                                 "extension": [
                                     {
                                         "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "1"
+                                        "valueString": "2"
                                     }
                                 ],
                                 "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
-                                "code": "LA6568-5",
-                                "display": "Not at all"
+                                "code": "LA13863-8",
+                                "display": "A little bit"
                             }
                         }
                     ]
@@ -593,12 +593,12 @@
                                 "extension": [
                                     {
                                         "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "2"
+                                        "valueString": "3"
                                     }
                                 ],
                                 "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
-                                "code": "LA13863-8",
-                                "display": "A little bit"
+                                "code": "LA13909-9",
+                                "display": "Somewhat"
                             }
                         }
                     ]
@@ -611,12 +611,12 @@
                                 "extension": [
                                     {
                                         "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "4"
+                                        "valueString": "2"
                                     }
                                 ],
                                 "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
-                                "code": "LA13902-4",
-                                "display": "Quite a bit"
+                                "code": "LA13863-8",
+                                "display": "A little bit"
                             }
                         }
                     ]
@@ -629,12 +629,12 @@
                                 "extension": [
                                     {
                                         "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "3"
+                                        "valueString": "2"
                                     }
                                 ],
                                 "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
-                                "code": "LA13909-9",
-                                "display": "Somewhat"
+                                "code": "LA13863-8",
+                                "display": "A little bit"
                             }
                         }
                     ]
@@ -666,7 +666,7 @@
                     "linkId": "pain-interference-t-score",
                     "answer": [
                         {
-                            "valueDecimal": 59.9
+                            "valueDecimal": 57.1
                         }
                     ]
                 }
@@ -679,7 +679,7 @@
                     "linkId": "07855a30-7b9f-456e-8d01-97efab5268bc",
                     "answer": [
                         {
-                            "valueInteger": 6
+                            "valueInteger": 3
                         }
                     ]
                 }
@@ -690,42 +690,6 @@
             "item": [
                 {
                     "linkId": "0fe4e618-3bb5-4aaa-b45a-0fa64de9b1f4",
-                    "answer": [
-                        {
-                            "valueCoding": {
-                                "extension": [
-                                    {
-                                        "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "4"
-                                    }
-                                ],
-                                "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
-                                "code": "LA13902-4",
-                                "display": "Quite a bit"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "linkId": "42e7f814-1a31-4b0e-ac8e-5cdcfa7c0fe5",
-                    "answer": [
-                        {
-                            "valueCoding": {
-                                "extension": [
-                                    {
-                                        "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "3"
-                                    }
-                                ],
-                                "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
-                                "code": "LA13909-9",
-                                "display": "Somewhat"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "linkId": "c26471c6-c259-461b-9738-f3af87f1a02f",
                     "answer": [
                         {
                             "valueCoding": {
@@ -743,6 +707,42 @@
                     ]
                 },
                 {
+                    "linkId": "42e7f814-1a31-4b0e-ac8e-5cdcfa7c0fe5",
+                    "answer": [
+                        {
+                            "valueCoding": {
+                                "extension": [
+                                    {
+                                        "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                                        "valueString": "1"
+                                    }
+                                ],
+                                "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
+                                "code": "LA6568-5",
+                                "display": "Not at all"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "c26471c6-c259-461b-9738-f3af87f1a02f",
+                    "answer": [
+                        {
+                            "valueCoding": {
+                                "extension": [
+                                    {
+                                        "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                                        "valueString": "1"
+                                    }
+                                ],
+                                "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
+                                "code": "LA6568-5",
+                                "display": "Not at all"
+                            }
+                        }
+                    ]
+                },
+                {
                     "linkId": "a9e378c1-cb26-4707-95bd-69efc653986a",
                     "answer": [
                         {
@@ -750,12 +750,12 @@
                                 "extension": [
                                     {
                                         "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
-                                        "valueString": "3"
+                                        "valueString": "2"
                                     }
                                 ],
                                 "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
-                                "code": "LA13909-9",
-                                "display": "Somewhat"
+                                "code": "LA13863-8",
+                                "display": "A little bit"
                             }
                         }
                     ]
@@ -769,7 +769,7 @@
                     "linkId": "cognitive-function-t-score",
                     "answer": [
                         {
-                            "valueDecimal": 57
+                            "valueDecimal": 43.1
                         }
                     ]
                 }
@@ -782,7 +782,7 @@
                     "linkId": "649b1527-9a48-4f74-bc1f-04b099af3b25",
                     "answer": [
                         {
-                            "valueBoolean": false
+                            "valueBoolean": true
                         }
                     ]
                 }

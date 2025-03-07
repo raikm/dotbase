@@ -1,0 +1,792 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "afd5f88e-eb47-4033-b168-69568b762817",
+  "meta": {
+    "extension": [
+      {
+        "url": "https://dotbase.org/fhir/StructureDefinition/resource-creation-datetime",
+        "valueDateTime": "2025-03-07T08:30:11.828+00:00"
+      },
+      {
+        "url": "https://dotbase.org/fhir/StructureDefinition/resource-creator",
+        "valueCode": "9af64397-6de4-484d-a4a8-fb8c57e4223b"
+      }
+    ],
+    "versionId": "1",
+    "lastUpdated": "2025-03-07T08:30:11.828+00:00",
+    "source": "#miHOJJUXKIIfFl5c"
+  },
+  "questionnaire": "https://dotbase.org/fhir/Questionnaire/promis-33-v2-1-english-mobile",
+  "_questionnaire": {
+    "extension": [
+      {
+        "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-canonical-reference",
+        "valueReference": {
+          "reference": "Questionnaire/a14a0c2c-cea0-479d-a426-89e50344866f"
+        }
+      }
+    ]
+  },
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/9af64397-6de4-484d-a4a8-fb8c57e4223b"
+  },
+  "authored": "2025-03-07T08:30:11.454004Z",
+  "author": {
+    "type": "Patient"
+  },
+  "item": [
+    {
+      "linkId": "8533bbb7-7106-43fc-8332-bb4e9b84d36d"
+    },
+    {
+      "linkId": "600ec48d-0173-4b7e-b5c9-d3ec8c7fbfce"
+    },
+    {
+      "linkId": "physical-function-group",
+      "item": [
+        {
+          "linkId": "b091ae6a-6d84-4ec1-a62a-402715412985",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "1"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/e3bcf578-6a02-42fc-b2b3-dcd18ec2068",
+                "code": "LA13912-3",
+                "display": "Unable to do"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "99121fe3-c393-4792-bb83-19902274106e",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "3"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/e3bcf578-6a02-42fc-b2b3-dcd18ec2068",
+                "code": "LA13920-6",
+                "display": "With some difficulty"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "d2f827a2-2eb9-44dd-94d4-4c2000f151f0",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "2"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/e3bcf578-6a02-42fc-b2b3-dcd18ec2068",
+                "code": "LA13919-8",
+                "display": "With much difficulty"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "b0abc3fe-08d7-44d4-861c-a6e62ecaadce",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "3"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/e3bcf578-6a02-42fc-b2b3-dcd18ec2068",
+                "code": "LA13920-6",
+                "display": "With some difficulty"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "physical-function-score-group",
+      "item": [
+        {
+          "linkId": "physical-function-t-score",
+          "answer": [
+            {
+              "valueDecimal": 33.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "anxiety-group",
+      "item": [
+        {
+          "linkId": "feed250f-d4c7-49d2-93cc-1c0dd25dcc35",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "3"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
+                "code": "LA10082-8",
+                "display": "Sometimes"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "789dc818-3151-4c44-863f-faef6d3953a4",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "4"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
+                "code": "LA10044-8",
+                "display": "Usually"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "afaf7c43-e40c-46f7-bfb3-77e749048a85",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "3"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
+                "code": "LA10082-8",
+                "display": "Sometimes"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "e02b744c-dd47-43fe-8d17-3bf8ac470a76",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "4"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
+                "code": "LA10044-8",
+                "display": "Usually"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "anxiety-score-group",
+      "item": [
+        {
+          "linkId": "anxiety-t-score",
+          "answer": [
+            {
+              "valueDecimal": 67.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "depression-group",
+      "item": [
+        {
+          "linkId": "ce5fbd63-9b41-4f14-868a-fb865bc2fce1",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "3"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
+                "code": "LA10082-8",
+                "display": "Sometimes"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "5bfe884f-a212-450a-8775-c7101b7cd2b5",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "2"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
+                "code": "LA10066-1",
+                "display": "Rarely"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "66122483-dbfe-4321-b77f-fcead6d83dfc",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "4"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
+                "code": "LA10044-8",
+                "display": "Usually"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "b53cb945-8596-49b8-aa3d-c50a1cdf6e32",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "3"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
+                "code": "LA10082-8",
+                "display": "Sometimes"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "depression-score-group",
+      "item": [
+        {
+          "linkId": "depression-t-score",
+          "answer": [
+            {
+              "valueDecimal": 62.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "fatigue-group",
+      "item": [
+        {
+          "linkId": "5a4b771d-a06b-49eb-a702-a95eefe631ec",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "2"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
+                "code": "LA13863-8",
+                "display": "A little bit"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "23a32d7d-d2ef-4118-a86c-12b6a7ae52b0",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "4"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
+                "code": "LA13902-4",
+                "display": "Quite a bit"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "9648faca-ce2f-4508-9c1d-74939746a589",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "3"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
+                "code": "LA13909-9",
+                "display": "Somewhat"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "fc0cd66a-b698-403a-b03e-c769917f28bc",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "4"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
+                "code": "LA13902-4",
+                "display": "Quite a bit"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "fatigue-score-group",
+      "item": [
+        {
+          "linkId": "fatigue-t-score",
+          "answer": [
+            {
+              "valueDecimal": 58.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "sleep-disturbance-group",
+      "item": [
+        {
+          "linkId": "37eefdf5-abd5-4df6-9f6f-e92c243dbb1a",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "1"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/28b82374-4bcf-45cc-96c3-e9e449fee569",
+                "code": "LA13913-1",
+                "display": "Very good"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "cf8711be-f1a9-4a6d-9020-1dc91c261048",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "4"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
+                "code": "LA10044-8",
+                "display": "Usually"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "5aa9c51d-f75f-4b47-9534-212054b4885f",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "3"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
+                "code": "LA13909-9",
+                "display": "Somewhat"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "5301679b-39d8-4da1-b22e-c69d9a5760e7",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "4"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
+                "code": "LA13902-4",
+                "display": "Quite a bit"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "sleep-disturbance-score-group",
+      "item": [
+        {
+          "linkId": "sleep-disturbance-t-score",
+          "answer": [
+            {
+              "valueDecimal": 54.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "social-ability-group",
+      "item": [
+        {
+          "linkId": "19ab4386-890c-4ac6-b739-dbecdfa1d3b8",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "2"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
+                "code": "LA10066-1",
+                "display": "Rarely"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "513609ed-0d3c-404f-94b2-1a4701733622",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "3"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
+                "code": "LA10082-8",
+                "display": "Sometimes"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "b31f77cd-597a-4791-8cd0-223016b277d6",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "2"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/f13b1765-d290-4c04-a4d8-d374cf3827dc",
+                "code": "LA10066-1",
+                "display": "Rarely"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "3100da29-df22-4b24-9e21-b46bde5d999b",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "3"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
+                "code": "LA13909-9",
+                "display": "Somewhat"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "social-ability-score-group",
+      "item": [
+        {
+          "linkId": "social-ability-t-score",
+          "answer": [
+            {
+              "valueDecimal": 40.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "pain-interference-group",
+      "item": [
+        {
+          "linkId": "c0cc463e-0067-43e1-b924-7d9d2d1e2500",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "2"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
+                "code": "LA13863-8",
+                "display": "A little bit"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "35b48d29-3aff-4d79-916c-259084c326a5",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "3"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
+                "code": "LA13909-9",
+                "display": "Somewhat"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "244f5320-7ee6-46d0-9fdb-4e421911951a",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "3"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
+                "code": "LA13909-9",
+                "display": "Somewhat"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "9a1e46c6-57a3-40a6-83c7-f43c95c22e8f",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "4"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
+                "code": "LA13902-4",
+                "display": "Quite a bit"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "pain-interference-score-group",
+      "item": [
+        {
+          "linkId": "pain-interference-t-score",
+          "answer": [
+            {
+              "valueDecimal": 61.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "pain-intensity-group",
+      "item": [
+        {
+          "linkId": "07855a30-7b9f-456e-8d01-97efab5268bc",
+          "answer": [
+            {
+              "valueInteger": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "cognitive-function-group",
+      "item": [
+        {
+          "linkId": "0fe4e618-3bb5-4aaa-b45a-0fa64de9b1f4",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "4"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
+                "code": "LA13902-4",
+                "display": "Quite a bit"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "42e7f814-1a31-4b0e-ac8e-5cdcfa7c0fe5",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "2"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
+                "code": "LA13863-8",
+                "display": "A little bit"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "c26471c6-c259-461b-9738-f3af87f1a02f",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "3"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
+                "code": "LA13909-9",
+                "display": "Somewhat"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "a9e378c1-cb26-4707-95bd-69efc653986a",
+          "answer": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "https://dotbase.org/fhir/StructureDefinition/coding-score-value",
+                    "valueString": "3"
+                  }
+                ],
+                "system": "https://dotbase.org/fhir/CodeSystem/e9983f65-3009-4472-b393-f4e4486bb7fb",
+                "code": "LA13909-9",
+                "display": "Somewhat"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "cognitive-function-score-group",
+      "item": [
+        {
+          "linkId": "cognitive-function-t-score",
+          "answer": [
+            {
+              "valueDecimal": 57
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "6aebf707-2bb5-4d57-849c-77f211ae6513",
+      "item": [
+        {
+          "linkId": "649b1527-9a48-4f74-bc1f-04b099af3b25",
+          "answer": [
+            {
+              "valueBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
