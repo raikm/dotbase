@@ -1,88 +1,74 @@
 <template>
   <div>
     <h1>Data Hub</h1>
-    <h2>Questionnaires</h2>
-    <div v-if="questionnaires" class="flex">
-      <DataTable class="flex-2/3" :value="questionnaires">
-        <Column field="id" header="ID" />
-        <Column field="lastUpdated" header="Last updated" />
-        <Column field="status" header="Status" />
-      </DataTable>
-      <div class="flex-1/3">
-        <Chart type="radar" :data="chartData" :options="chartOptions" class="w-full md:w-[30rem]" />
+    <h2>Questionnaire Responses</h2>
+    <div v-if="questionnaireResponses" class="grid grid-cols-5 gap-4 overflow-hidden">
+      <div class="col-span-3 overflow-hidden">
+        <DataTable
+          v-model:selection="selectedQuestionnaireResponse"
+          show-gridlines
+          selection-mode="single"
+          data-key="id"
+          scrollable
+          scroll-height="flex"
+          :value="questionnaireResponses"
+        >
+          <Column
+            field="id"
+            header="ID"
+            style="max-width: 50px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap"
+          />
+          <Column field="meta.lastUpdated" header="Last updated">
+            <template #body="{ data }">
+              <span>{{ new Date(data.meta.lastUpdated).toLocaleString() }}</span>
+            </template>
+          </Column>
+          <Column field="status" header="Status">
+            <template #body="{ data }">
+              <Tag :value="data.status" :severity="getStatusLabel(data.inventoryStatus)" />
+            </template>
+          </Column>
+        </DataTable>
+      </div>
+      <div class="col-span-2">
+        <PROMIS33Chart
+          v-if="selectedQuestionnaireResponse"
+          :selected-questionnaire-response="selectedQuestionnaireResponse"
+        />
+        <div v-else>
+          <!-- TODO no questionnaire response selected -->
+        </div>
       </div>
     </div>
     <div v-else>
-      <!-- no questionnairs found -->
+      <!-- TODO no questionnairs found -->
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import type { Questionnaire } from '~/types/Questionnaire'
-import Chart from 'primevue/chart';
+import type { QuestionnaireResponse } from 'fhir/r5'
 
-const questionnaires = ref<Questionnaire[]>()
-const { data } = await useFetch<Questionnaire[]>(`/api/questionnaires`)
-questionnaires.value = data.value || []
+const questionnaireResponses = ref<QuestionnaireResponse[]>()
+const selectedQuestionnaireResponse = ref<QuestionnaireResponse>()
 
-onMounted(() => {
-  chartData.value = setChartData();
-  chartOptions.value = setChartOptions();
-})
+const { data } = await useFetch<QuestionnaireResponse[]>(`/api/questionnaireResponses`)
+questionnaireResponses.value = data.value || []
 
-
-const chartData = ref();
-const chartOptions = ref();
-        
-const setChartData = () => {
-    const documentStyle = getComputedStyle(document.documentElement);
-    const textColor = documentStyle.getPropertyValue('--p-text-color');
-
-    return {
-        labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
-        datasets: [
-            {
-                label: 'My First dataset',
-                borderColor: documentStyle.getPropertyValue('--p-gray-400'),
-                pointBackgroundColor: documentStyle.getPropertyValue('--p-gray-400'),
-                pointBorderColor: documentStyle.getPropertyValue('--p-gray-400'),
-                pointHoverBackgroundColor: textColor,
-                pointHoverBorderColor: documentStyle.getPropertyValue('--p-gray-400'),
-                data: [65, 59, 90, 81, 56, 55, 40]
-            },
-            {
-                label: 'My Second dataset',
-                borderColor: documentStyle.getPropertyValue('--p-pink-400'),
-                pointBackgroundColor: documentStyle.getPropertyValue('--p-pink-400'),
-                pointBorderColor: documentStyle.getPropertyValue('--p-pink-400'),
-                pointHoverBackgroundColor: textColor,
-                pointHoverBorderColor: documentStyle.getPropertyValue('--p-pink-400'),
-                data: [28, 48, 40, 19, 96, 27, 100]
-            }
-        ]
-    };
-};
-const setChartOptions = () => {
-    const documentStyle = getComputedStyle(document.documentElement);
-    const textColor = documentStyle.getPropertyValue('--p-text-color');
-    const textColorSecondary = documentStyle.getPropertyValue('--p-text-muted-color');
-
-    return {
-        plugins: {
-            legend: {
-                labels: {
-                    color: textColor
-                }
-            }
-        },
-        scales: {
-            r: {
-                grid: {
-                    color: textColorSecondary
-                }
-            }
-        }
-    };
+const getStatusLabel = (status: QuestionnaireResponse['status']) => {
+  switch (status) {
+    case 'completed':
+      return 'success'
+    case 'in-progress':
+      return 'warn'
+    case 'entered-in-error':
+      return 'danger'
+    case 'amended':
+      return 'warn'
+    case 'stopped':
+      return 'danger'
+    default:
+      return 'info'
+  }
 }
 </script>
