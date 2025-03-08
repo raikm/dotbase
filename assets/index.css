@@ -8,3 +8,13 @@
 html {
   font-family: "Figtree", sans-serif;
 }
+
+h1 {
+  font-size: xx-large;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: x-large;
+  margin-bottom: 0.5rem;
+}
