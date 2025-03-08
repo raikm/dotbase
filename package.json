@@ -21,6 +21,7 @@
     "@primeuix/themes": "^1.0.0",
     "@primevue/forms": "^4.3.1",
     "@tailwindcss/vite": "^4.0.9",
+    "@types/fhir": "^0.0.41",
     "chart.js": "^4.4.8",
     "eslint": "^9.21.0",
     "eslint-config-prettier": "^10.0.2",
