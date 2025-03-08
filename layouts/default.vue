@@ -13,10 +13,11 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import type { User } from "~/types/User";
 
 const route = useRoute();
 
-const { data: user } = await useFetch("/api/user");
+const { data: user } = await useFetch<User>("/api/user/720072c1-47d9-4f2f-b2ba-e8ec0e8dee42");
 
 const home = ref({
   icon: "pi pi-home",

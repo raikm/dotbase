@@ -51,6 +51,7 @@
 import { ref } from "vue";
 import { zodResolver } from "@primevue/forms/resolvers/zod";
 import { z } from "zod";
+import type { User } from "~/types/User";
 
 interface FormData {
   firstName: string;
@@ -58,7 +59,7 @@ interface FormData {
   email: string;
 }
 
-const { data: user } = await useFetch("/api/user");
+const { data: user } = await useFetch<User>("/api/user/720072c1-47d9-4f2f-b2ba-e8ec0e8dee42");
 
 const initialValues = ref<FormData>({
   firstName: user.value?.firstName || "",
