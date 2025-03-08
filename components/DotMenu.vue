@@ -1,5 +1,5 @@
 <template>
-  <Menu :model="items" class="w-full md:w-60 h-screen py-4">
+  <Menu :model="items" class="w-full md:w-60 py-4">
     <template #start>
       <span class="inline-flex items-center gap-1 px-2 py-2">
         <span class="text-xl font-semibold">Dotbase Coding Challenge</span>
