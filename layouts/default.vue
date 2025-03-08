@@ -1,10 +1,10 @@
 <template>
-  <div class="flex bg-slate-100 gap-4 p-4 h-screen">
-    <DotMenu v-if="user"  :user="user" class="h-full " />
+  <div class="flex bg-slate-100 gap-4 p-4 h-screen overflow-hidden">
+    <DotMenu v-if="user" :user="user" class="h-full" />
 
-    <div class="flex-1 p-4 bg-white border border-slate-200 rounded ">
+    <div class="flex-1 p-4 bg-white border border-slate-200 rounded h-full overflow-hidden">
       <DotBreadcrumb :home="home" :items="items" />
-      <div class="px-4 ">
+      <div class="h-full overflow-hidden">
         <slot />
       </div>
     </div>

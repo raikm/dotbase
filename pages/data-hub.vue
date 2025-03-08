@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <div class="h-full flex flex-col">
     <h1>Data Hub</h1>
     <h2>Questionnaire Responses</h2>
-    <div v-if="questionnaireResponses" class="grid grid-cols-5 gap-4 overflow-hidden">
-      <div class="col-span-3 overflow-hidden">
+    <!-- TODO pb-12 is just workaround  -->
+    <div v-if="questionnaireResponses" class="flex-1 flex overflow-hidden pb-12 ">
+      <div class="flex-1">
         <DataTable
           v-model:selection="selectedQuestionnaireResponse"
           show-gridlines
@@ -25,12 +26,12 @@
           </Column>
           <Column field="status" header="Status">
             <template #body="{ data }">
-              <Tag :value="data.status" :severity="getStatusLabel(data.inventoryStatus)" />
+              <Tag :value="data.status" :severity="getStatusLabel(data.status)" />
             </template>
           </Column>
         </DataTable>
       </div>
-      <div class="col-span-2">
+      <div class="flex-1">
         <PROMIS33Chart
           v-if="selectedQuestionnaireResponse"
           :selected-questionnaire-response="selectedQuestionnaireResponse"
@@ -41,7 +42,7 @@
       </div>
     </div>
     <div v-else>
-      <!-- TODO no questionnairs found -->
+      <!-- TODO no questionnaires found -->
     </div>
   </div>
 </template>

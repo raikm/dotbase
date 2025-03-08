@@ -1,6 +1,7 @@
-import { QuestionnaireDbService as QuestionnaireResponseDbService } from '~/server/services/questionnaireResponses/QuestionnaireResponseDbService'
+import { FileQuestionnaireResponseDbService } from '~/server/services/questionnaireResponses/FileQuestionnaireResponseService'
 
 export default defineEventHandler(async () => {
-  const questionnaireService = new QuestionnaireResponseDbService()
-  return questionnaireService.getAll()
+  // TODO use plugins
+  const questionnaireResponseService = new FileQuestionnaireResponseDbService()
+  return questionnaireResponseService.getAll()
 })
