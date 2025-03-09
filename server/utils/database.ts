@@ -1,21 +1,35 @@
 import type { User } from '~/types/User'
 import fs from 'fs'
 import path from 'path'
-import type { QuestionnaireResponse } from 'fhir/r5'
+import type { Questionnaire, QuestionnaireResponse } from 'fhir/r5'
 
 interface Database {
   users: User[]
   questionnaireResponses: QuestionnaireResponse[]
+  questionnaires: Questionnaire[]
 }
 
 // TODO verify if cleanest way to get the path with this conditions
-const questionnaireResponsesDir = path.join(process.cwd(), 'server/fhir/QuestionnaireResponses')
+const questionnaireResponsesDir = path.join(
+  process.cwd(),
+  'server/fhir/QuestionnaireResponses',
+)
+const questionnairesDir = path.join(process.cwd(), 'server/fhir/Questionnaires')
 
 const questionnaireResponses: QuestionnaireResponse[] = fs
   .readdirSync(questionnaireResponsesDir)
   .filter((file) => file.endsWith('.json'))
   .map((file) => {
     const filePath = path.join(questionnaireResponsesDir, file)
+    const fileContents = fs.readFileSync(filePath, 'utf-8')
+    return JSON.parse(fileContents)
+  })
+
+const questionnaires: Questionnaire[] = fs
+  .readdirSync(questionnairesDir)
+  .filter((file) => file.endsWith('.json'))
+  .map((file) => {
+    const filePath = path.join(questionnairesDir, file)
     const fileContents = fs.readFileSync(filePath, 'utf-8')
     return JSON.parse(fileContents)
   })
@@ -32,4 +46,5 @@ export const database: Database = {
     },
   ],
   questionnaireResponses,
+  questionnaires,
 }
