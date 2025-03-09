@@ -32,9 +32,10 @@ const items = computed(() => {
   if (route.path === '/settings') {
     return [{ label: 'Settings', route: '/settings' }]
   }
-  if (route.path === '/data-hub') {
+  if (route.path.startsWith('/data-hub')) {
     return [{ label: 'Data Hub', route: '/data-hub' }]
   }
+
   if (route.path === '/') {
     return [{ label: 'Home', route: '/' }]
   }

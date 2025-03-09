@@ -1,6 +1,5 @@
 <template>
   <div class="flex h-full flex-col">
-    <h1>Data Hub</h1>
     <h2>Questionnaire Responses</h2>
     <!-- TODO pb-12 is just workaround  -->
     <div
@@ -51,7 +50,7 @@
         </DataTable>
       </div>
       <div class="flex-1">
-        <PROMIS33Chart
+        <PROMISChart
           v-if="selectedQuestionnaireResponse"
           :selected-questionnaire-response="selectedQuestionnaireResponse"
         />
@@ -60,22 +59,22 @@
         </div>
       </div>
     </div>
-    <div v-else>
-      <!-- TODO no questionnaires found -->
-    </div>
+    <div v-else></div>
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import type { QuestionnaireResponse } from 'fhir/r5'
 
 const questionnaireResponses = ref<QuestionnaireResponse[]>()
 const selectedQuestionnaireResponse = ref<QuestionnaireResponse>()
+const route = useRoute()
 
-const { data } = await useFetch<QuestionnaireResponse[]>(
-  `/api/questionnaireResponses`,
-)
-questionnaireResponses.value = data.value || []
+onMounted(async () => {
+  questionnaireResponses.value = await $fetch<QuestionnaireResponse[]>(
+    `/api/questionnaireResponses/${route.params.questionnaireId}`,
+  )
+})
 
 const getStatusLabel = (status: QuestionnaireResponse['status']) => {
   switch (status) {
