@@ -16,14 +16,14 @@
 
 <script setup lang="ts">
 interface TextInputProps {
-  name: string;
-  label: string;
-  placeholder?: string;
-  type?: string;
-  fluid?: boolean;
-  invalid?: boolean;
-  errorMessage?: string;
+  name: string
+  label: string
+  placeholder?: string
+  type?: string
+  fluid?: boolean
+  invalid?: boolean
+  errorMessage?: string
 }
 
-defineProps<TextInputProps>();
+defineProps<TextInputProps>()
 </script>

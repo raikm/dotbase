@@ -23,17 +23,17 @@
 
 <script setup lang="ts">
 interface MenuItem {
-  label?: string;
-  route?: string;
-  url?: string;
-  target?: string;
-  icon?: string;
+  label?: string
+  route?: string
+  url?: string
+  target?: string
+  icon?: string
 }
 
 interface Props {
-  home: MenuItem;
-  items: MenuItem[];
+  home: MenuItem
+  items: MenuItem[]
 }
 
-defineProps<Props>();
+defineProps<Props>()
 </script>

@@ -1,12 +1,12 @@
-@import "tailwindcss";
-@import "primeicons/primeicons.css";
+@import 'tailwindcss';
+@import 'primeicons/primeicons.css';
 
-@import "@fontsource/figtree/400.css";
-@import "@fontsource/figtree/500.css";
-@import "@fontsource/figtree/600.css";
+@import '@fontsource/figtree/400.css';
+@import '@fontsource/figtree/500.css';
+@import '@fontsource/figtree/600.css';
 
 html {
-  font-family: "Figtree", sans-serif;
+  font-family: 'Figtree', sans-serif;
 }
 
 h1 {

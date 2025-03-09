@@ -1,75 +1,101 @@
 <template>
-  <div>
-    <Chart type="radar" :data="chartData" :options="chartOptions" />
+  <div class="p-4">
+    <Chart type="radar" :data="chartData" />
   </div>
 </template>
 
 <script lang="ts" setup>
-import Chart from 'primevue/chart';
-import type { QuestionnaireResponse } from 'fhir/r5'
+import Chart from 'primevue/chart'
+import fhirpath from 'fhirpath'
 
-const {selectedQuestionnaireResponse} = defineProps<{selectedQuestionnaireResponse: QuestionnaireResponse}>();
+import type { Questionnaire, QuestionnaireResponse } from 'fhir/r5'
 
-const chartData = ref();
-const chartOptions = ref();
+const { selectedQuestionnaireResponse } = defineProps<{
+  selectedQuestionnaireResponse: QuestionnaireResponse
+}>()
 
-onMounted(() => {
-  chartData.value = setChartData();
-  chartOptions.value = setChartOptions();
+const questionnaire = ref<Questionnaire | null>()
+const chartData = ref()
+
+onMounted(async () => {
+  await getQuestionnaireFromResponse()
+  await extractScoreData()
 })
 
-watch(() => selectedQuestionnaireResponse, () => {
-  console.log(selectedQuestionnaireResponse)
-})
-        
-const setChartData = () => {
-    const documentStyle = getComputedStyle(document.documentElement);
-    const textColor = documentStyle.getPropertyValue('--p-text-color');
+watch(
+  () => selectedQuestionnaireResponse,
+  async () => {
+    await getQuestionnaireFromResponse()
+    await extractScoreData()
+  },
+)
 
-    return {
-        labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
-        datasets: [
-            {
-                label: 'My First dataset',
-                borderColor: documentStyle.getPropertyValue('--p-gray-400'),
-                pointBackgroundColor: documentStyle.getPropertyValue('--p-gray-400'),
-                pointBorderColor: documentStyle.getPropertyValue('--p-gray-400'),
-                pointHoverBackgroundColor: textColor,
-                pointHoverBorderColor: documentStyle.getPropertyValue('--p-gray-400'),
-                data: [65, 59, 90, 81, 56, 55, 40]
-            },
-            {
-                label: 'My Second dataset',
-                borderColor: documentStyle.getPropertyValue('--p-pink-400'),
-                pointBackgroundColor: documentStyle.getPropertyValue('--p-pink-400'),
-                pointBorderColor: documentStyle.getPropertyValue('--p-pink-400'),
-                pointHoverBackgroundColor: textColor,
-                pointHoverBorderColor: documentStyle.getPropertyValue('--p-pink-400'),
-                data: [28, 48, 40, 19, 96, 27, 100]
-            }
-        ]
-    };
-};
-const setChartOptions = () => {
-    const documentStyle = getComputedStyle(document.documentElement);
-    const textColor = documentStyle.getPropertyValue('--p-text-color');
-    const textColorSecondary = documentStyle.getPropertyValue('--p-text-muted-color');
+const getQuestionnaireFromResponse = async () => {
+  const questionnaireReference = await fhirpath.evaluate(
+    selectedQuestionnaireResponse,
+    "_questionnaire.extension.where(url='https://dotbase.org/fhir/StructureDefinition/questionnaire-canonical-reference').valueReference.reference",
+  )
+  // TODO check for better way to get questionnaire id
+  const questionnaireId = questionnaireReference[0].split('/').pop()
 
-    return {
-        plugins: {
-            legend: {
-                labels: {
-                    color: textColor
-                }
-            }
-        },
-        scales: {
-            r: {
-                grid: {
-                    color: textColorSecondary
-                }
-            }
-        }
-    };
+  questionnaire.value = await $fetch<Questionnaire>(
+    `/api/questionnaire/${questionnaireId}`,
+  )
+}
+
+const extractScoreData = async () => {
+  if (!questionnaire.value) return
+
+  // TODO extract data more accurately
+  // TODO typesafe
+  const scoreGroups = await fhirpath.evaluate(
+    questionnaire.value,
+    "item.where(type='group' and text.endsWith('Score'))",
+  )
+
+  const scoreResults: number[] = []
+
+  for (const scoreGroup of scoreGroups) {
+    // TODO extract data more accurately
+    // scoreGroup.item[0].linkId == t-score linkId
+    const scorePath = `item.where(linkId='${scoreGroup.linkId}').item.where(linkId='${scoreGroup.item[0].linkId}').answer.valueDecimal`
+
+    const result = await fhirpath.evaluate(
+      selectedQuestionnaireResponse,
+      scorePath,
+    )
+    scoreResults.push(result[0])
+  }
+
+  // TODO if scoreGroup has no answer then don't display in diagram
+  chartData.value = setChartData(
+    scoreGroups.map((c) => c.text),
+    scoreResults,
+    questionnaire.value?.description,
+  )
+}
+
+const setChartData = (
+  labels: string[],
+  data: number[],
+  description?: string,
+) => {
+  const documentStyle = getComputedStyle(document.documentElement)
+  const textColor = documentStyle.getPropertyValue('--p-text-color')
+
+  return {
+    labels: labels,
+    datasets: [
+      {
+        label: description,
+        data: data,
+        borderColor: documentStyle.getPropertyValue('--p-gray-400'),
+        pointBackgroundColor: documentStyle.getPropertyValue('--p-gray-400'),
+        pointBorderColor: documentStyle.getPropertyValue('--p-gray-400'),
+        pointHoverBackgroundColor: textColor,
+        pointHoverBorderColor: documentStyle.getPropertyValue('--p-gray-400'),
+      },
+    ],
+  }
 }
 </script>

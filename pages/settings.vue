@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-3xl mb-2">User Settings</h1>
+    <h1 class="mb-2 text-3xl">User Settings</h1>
     <p class="text-md mb-4">
       Update your personal information below. You can change your name and email
       address.
@@ -10,7 +10,7 @@
       v-slot="$form"
       :resolver="resolver"
       :initial-values="initialValues"
-      class="flex flex-col gap-4 w-full"
+      class="flex w-full flex-col gap-4"
       @submit="onFormSubmit"
     >
       <ControlledTextInput
@@ -48,56 +48,58 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { zodResolver } from "@primevue/forms/resolvers/zod";
-import { z } from "zod";
-import type { User } from "~/types/User";
+import { ref } from 'vue'
+import { zodResolver } from '@primevue/forms/resolvers/zod'
+import { z } from 'zod'
+import type { User } from '~/types/User'
 
 interface FormData {
-  firstName: string;
-  lastName: string;
-  email: string;
+  firstName: string
+  lastName: string
+  email: string
 }
 
-const { data: user } = await useFetch<User>("/api/user/720072c1-47d9-4f2f-b2ba-e8ec0e8dee42");
+const { data: user } = await useFetch<User>(
+  '/api/user/720072c1-47d9-4f2f-b2ba-e8ec0e8dee42',
+)
 
 const initialValues = ref<FormData>({
-  firstName: user.value?.firstName || "",
-  lastName: user.value?.lastName || "",
-  email: user.value?.email || "",
-});
+  firstName: user.value?.firstName || '',
+  lastName: user.value?.lastName || '',
+  email: user.value?.email || '',
+})
 
 const resolver = ref(
   zodResolver(
     z.object({
-      firstName: z.string().min(1, { message: "First name is required." }),
-      lastName: z.string().min(1, { message: "Last name is required." }),
+      firstName: z.string().min(1, { message: 'First name is required.' }),
+      lastName: z.string().min(1, { message: 'Last name is required.' }),
       email: z
         .string()
-        .min(1, { message: "Email is required." })
-        .email({ message: "Invalid email address." }),
+        .min(1, { message: 'Email is required.' })
+        .email({ message: 'Invalid email address.' }),
     }),
   ),
-);
+)
 
 const onFormSubmit = async ({
   valid,
   values,
 }: {
-  valid: boolean;
-  values: FormData;
+  valid: boolean
+  values: FormData
 }) => {
   if (!user.value?.id || !valid) {
-    return;
+    return
   }
 
   await useFetch(`/api/user/${user.value.id}`, {
-    method: "POST",
+    method: 'POST',
     body: {
       firstName: values.firstName,
       lastName: values.lastName,
       email: values.email,
     },
-  });
-};
+  })
+}
 </script>
