@@ -1,7 +1,7 @@
 <template>
   <div class="flex h-full flex-col">
+    <Toast />
     <h2>Questionnaire Responses</h2>
-    <!-- TODO pb-12 is just workaround  -->
     <div
       v-if="questionnaireResponses"
       class="flex flex-1 overflow-hidden pb-12"
@@ -59,21 +59,33 @@
         </div>
       </div>
     </div>
-    <div v-else></div>
+    <div v-else>
+      <p>No questionnaire responses</p>
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import type { QuestionnaireResponse } from 'fhir/r5'
+import { useToast } from 'primevue/usetoast'
 
-const questionnaireResponses = ref<QuestionnaireResponse[]>()
-const selectedQuestionnaireResponse = ref<QuestionnaireResponse>()
 const route = useRoute()
+const toast = useToast()
 
-onMounted(async () => {
-  questionnaireResponses.value = await $fetch<QuestionnaireResponse[]>(
-    `/api/questionnaireResponses/${route.params.questionnaireId}`,
-  )
+const selectedQuestionnaireResponse = ref<QuestionnaireResponse>()
+
+const { data: questionnaireResponses, error } = await useFetch<
+  QuestionnaireResponse[]
+>(`/api/questionnaireResponses/${route.params.questionnaireId}`)
+
+onMounted(() => {
+  if (error.value) {
+    toast.add({
+      severity: 'error',
+      summary: 'Error',
+      detail: error.value.message,
+    })
+  }
 })
 
 const getStatusLabel = (status: QuestionnaireResponse['status']) => {
