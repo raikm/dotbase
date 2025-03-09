@@ -10,7 +10,6 @@ export default defineEventHandler(async (event) => {
   const userService = new UserDbService()
 
   const user = await userService.getById(userId)
-
   if (!user) {
     return new Response('User not found', { status: 404 })
   }

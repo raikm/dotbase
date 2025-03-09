@@ -7,6 +7,10 @@ export default defineEventHandler(async (event) => {
   }
   const questionnaireService = new FileQuestionnaireDbService()
 
-  // TODO Error Handling
-  return await questionnaireService.getById(questionnaireId)
+  const result = await questionnaireService.getById(questionnaireId)
+  if (!result) {
+    return new Response('Questionnaire not found', { status: 404 })
+  }
+
+  return result
 })
