@@ -7,4 +7,8 @@ export class FileQuestionnaireDbService implements IQuestionnaireDbService {
       (questionnaire) => questionnaire.id === id,
     )
   }
+
+  async getAll(): Promise<Questionnaire[]> {
+    return database.questionnaires
+  }
 }

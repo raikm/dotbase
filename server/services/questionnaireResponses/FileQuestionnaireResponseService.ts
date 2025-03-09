@@ -4,8 +4,15 @@ import type { IQuestionnaireResponseDbService } from './IQuestionnaireResponseDb
 export class FileQuestionnaireResponseDbService
   implements IQuestionnaireResponseDbService
 {
-  async getAll(): Promise<QuestionnaireResponse[]> {
-    return database.questionnaireResponses
+  async getAll(questionnaireId?: string): Promise<QuestionnaireResponse[]> {
+    if (!questionnaireId) {
+      return database.questionnaireResponses
+    }
+    return database.questionnaireResponses.filter(
+      (questionnaire) =>
+        questionnaire._questionnaire?.extension?.[0]?.valueReference
+          ?.reference === `Questionnaire/${questionnaireId}`,
+    )
   }
 
   async getById(id: string): Promise<QuestionnaireResponse | undefined> {
