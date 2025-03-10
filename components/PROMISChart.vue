@@ -7,7 +7,11 @@
 <script lang="ts" setup>
 import Chart from 'primevue/chart'
 import fhirpath from 'fhirpath'
-import type { Questionnaire, QuestionnaireResponse } from 'fhir/r5'
+import type {
+  Questionnaire,
+  QuestionnaireItem,
+  QuestionnaireResponse,
+} from 'fhir/r5'
 
 const route = useRoute()
 
@@ -15,12 +19,8 @@ const { selectedQuestionnaireResponse } = defineProps<{
   selectedQuestionnaireResponse: QuestionnaireResponse
 }>()
 
-const questionnaire = ref<Questionnaire | null>()
 const chartData = ref()
 const chartOptions = ref()
-const chartLabels = ref<string[]>([])
-const chartValues = ref<number[]>([])
-const chartDescription = ref<string | undefined>()
 
 onMounted(async () => {
   await createChartDiagramBasedOnResponses()
@@ -34,10 +34,11 @@ watch(
 )
 
 const createChartDiagramBasedOnResponses = async () => {
-  await getQuestionnaire()
-  await getScoreResultsFromQuestionnaireResponse()
+  const questionnaire = await getQuestionnaire()
+  if (!questionnaire) return
 
-  chartData.value = setChartData()
+  await processScoreResultsFromQuestionnaireResponse(questionnaire)
+
   chartOptions.value = {
     scales: {
       r: {
@@ -52,58 +53,74 @@ const createChartDiagramBasedOnResponses = async () => {
 }
 
 const getQuestionnaire = async () => {
-  questionnaire.value = await $fetch<Questionnaire>(
-    `/api/questionnaires/${route.params.questionnaireId}`,
-  )
+  try {
+    return await $fetch<Questionnaire>(
+      `/api/questionnaires/${route.params.questionnaireId}`,
+    )
+  } catch (error) {
+    console.error(error)
+  }
 }
 
-const getScoreResultsFromQuestionnaireResponse = async () => {
-  if (!questionnaire.value) return
+const processScoreResultsFromQuestionnaireResponse = async (
+  questionnaire: Questionnaire,
+) => {
+  if (!questionnaire) return
 
-  const isInverted = (loincCode: string): boolean => {
+  // TODO chatch error if processing fails
+
+  // Quick workaround to check if the score is inverted based on LOINC code
+  const isInverted = (loincCode?: string): boolean => {
+    if (!loincCode) return false
     const invertedScores = ['71959-1'] // Physical Function Score LOINC
     return invertedScores.includes(loincCode)
   }
 
-  // TODO typesafe
-  const scoreGroups = await fhirpath.evaluate(
-    questionnaire.value,
+  const scoreGroups = (await fhirpath.evaluate(
+    questionnaire,
     "item.where(type='group' and linkId.endsWith('-score-group'))",
-  )
+  )) as QuestionnaireItem[]
 
-  const scoreResults: number[] = []
+  const scoreGroupResults: number[] = []
+  // TODO room for improvement: if scoreGroup in response not found or value not exist then don't include score in diagram -> solve with a collection
 
   for (const scoreGroup of scoreGroups) {
-    // TODO extract data more accurately / save
-    const scoreValue = await fhirpath.evaluate(
-      selectedQuestionnaireResponse,
-      `item.where(linkId='${scoreGroup.linkId}').item.where(linkId='${scoreGroup.item[0].linkId}').answer.valueDecimal`,
-    )
-    // TODO typesafe
-    if (isInverted(scoreGroup.item[0].code[0].code)) {
-      scoreValue[0] = 100 - scoreValue[0]
-    }
+    if (scoreGroup.item != undefined) {
+      // TODO get relevant LOINC-Codes from loinc.org/62337-1 to match them with selectedQuestionnaireResponse items
+      const scoreValue = (await fhirpath.evaluate(
+        selectedQuestionnaireResponse,
+        `item.where(linkId='${scoreGroup.linkId}').item.where(linkId='${scoreGroup.item[0].linkId}').answer.valueDecimal`,
+      )) as number[]
 
-    scoreResults.push(scoreValue[0])
+      if (isInverted(scoreGroup.item![0].code![0].code)) {
+        scoreValue[0] = 100 - scoreValue[0]
+      }
+
+      scoreGroupResults.push(scoreValue[0])
+    }
   }
 
-  // TODO if scoreGroup has no answer then don't display in diagram
-
-  chartLabels.value = scoreGroups.map((scoreGroup) => scoreGroup.item[0].text)
-  chartValues.value = scoreResults
-  chartDescription.value = questionnaire.value.description
+  setChartData(
+    scoreGroups.map((scoreGroup) => scoreGroup.text ?? ''),
+    scoreGroupResults,
+    questionnaire.description,
+  )
 }
 
-const setChartData = () => {
+const setChartData = (
+  labels: string[],
+  data: number[],
+  description?: string,
+) => {
   const documentStyle = getComputedStyle(document.documentElement)
   const textColor = documentStyle.getPropertyValue('--p-text-color')
 
-  return {
-    labels: chartLabels.value,
+  chartData.value = {
+    labels: labels,
     datasets: [
       {
-        label: chartDescription.value,
-        data: chartValues.value,
+        label: description,
+        data: data,
         borderColor: documentStyle.getPropertyValue('--p-gray-400'),
         pointBackgroundColor: documentStyle.getPropertyValue('--p-gray-400'),
         pointBorderColor: documentStyle.getPropertyValue('--p-gray-400'),
