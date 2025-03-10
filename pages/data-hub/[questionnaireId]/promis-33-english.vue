@@ -84,6 +84,7 @@ onMounted(() => {
       severity: 'error',
       summary: 'Error',
       detail: error.value.message,
+      life: 5000,
     })
   }
 })

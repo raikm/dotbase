@@ -1,4 +1,10 @@
 {
   "editor.formatOnSave": true,
-  "cSpell.words": ["fhir", "fhirpath", "primevue", "PROMIS"]
+  "cSpell.words": [
+    "fhir",
+    "fhirpath",
+    "loinc",
+    "primevue",
+    "PROMIS"
+  ]
 }

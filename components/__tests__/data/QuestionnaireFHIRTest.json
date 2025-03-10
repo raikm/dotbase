@@ -1,0 +1,1155 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "a14a0c2c-cea0-479d-a426-89e50344866f",
+  "url": "https://dotbase.org/fhir/Questionnaire/promis-33-v2-1-english-mobile",
+  "name": "promis-33-english",
+  "title": "PROMIS-33 (English)",
+  "status": "active",
+  "subjectType": [
+    "Patient"
+  ],
+  "description": "PROMIS-33 Quality of Life",
+  "item": [
+    {
+      "linkId": "8533bbb7-7106-43fc-8332-bb4e9b84d36d",
+      "text": "Longitudinal visualisation",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/display-item-chart",
+              "extension": [
+                {
+                  "url": "code",
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "71959-1"
+                  }
+                }
+              ]
+            }
+          ],
+          "linkId": "97fce1ab-9774-4006-a535-bf961c8d261b",
+          "text": "Physical Function Score",
+          "type": "display",
+          "_type": {
+            "extension": [
+              {
+                "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-item-type",
+                "valueCode": "chart"
+              }
+            ]
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/display-item-chart",
+              "extension": [
+                {
+                  "url": "code",
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "71967-4"
+                  }
+                }
+              ]
+            }
+          ],
+          "linkId": "d7eefc8e-d435-4ed2-883b-adc0715f8c8a",
+          "text": "Anxiety Score",
+          "type": "display",
+          "_type": {
+            "extension": [
+              {
+                "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-item-type",
+                "valueCode": "chart"
+              }
+            ]
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/display-item-chart",
+              "extension": [
+                {
+                  "url": "code",
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "71965-8"
+                  }
+                }
+              ]
+            }
+          ],
+          "linkId": "8e256e78-e732-4ef6-9688-cdc8734e74b5",
+          "text": "Depression Score",
+          "type": "display",
+          "_type": {
+            "extension": [
+              {
+                "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-item-type",
+                "valueCode": "chart"
+              }
+            ]
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/display-item-chart",
+              "extension": [
+                {
+                  "url": "code",
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "71963-3"
+                  }
+                }
+              ]
+            }
+          ],
+          "linkId": "af87089f-dd2d-4b06-a1fb-26180f6d463e",
+          "text": "Fatigue Score",
+          "type": "display",
+          "_type": {
+            "extension": [
+              {
+                "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-item-type",
+                "valueCode": "chart"
+              }
+            ]
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/display-item-chart",
+              "extension": [
+                {
+                  "url": "code",
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "71955-9"
+                  }
+                }
+              ]
+            }
+          ],
+          "linkId": "e4952188-4821-4268-b94a-99421203620a",
+          "text": "Sleep Disturbance Score",
+          "type": "display",
+          "_type": {
+            "extension": [
+              {
+                "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-item-type",
+                "valueCode": "chart"
+              }
+            ]
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/display-item-chart",
+              "extension": [
+                {
+                  "url": "code",
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "71957-5"
+                  }
+                }
+              ]
+            }
+          ],
+          "linkId": "fa44b11a-66c8-4ca3-954c-1189c0eb66e8",
+          "text": "Social Ability Score",
+          "type": "display",
+          "_type": {
+            "extension": [
+              {
+                "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-item-type",
+                "valueCode": "chart"
+              }
+            ]
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/display-item-chart",
+              "extension": [
+                {
+                  "url": "code",
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "71961-7"
+                  }
+                }
+              ]
+            }
+          ],
+          "linkId": "57c2afea-705b-405d-8a30-c9a103498079",
+          "text": "Pain Interference Score",
+          "type": "display",
+          "_type": {
+            "extension": [
+              {
+                "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-item-type",
+                "valueCode": "chart"
+              }
+            ]
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/display-item-chart",
+              "extension": [
+                {
+                  "url": "code",
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "81538-1"
+                  }
+                }
+              ]
+            }
+          ],
+          "linkId": "5bdc0764-c1b4-4b48-adb5-a8833d079ac6",
+          "text": "Cognitive Function Score",
+          "type": "display",
+          "_type": {
+            "extension": [
+              {
+                "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-item-type",
+                "valueCode": "chart"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "600ec48d-0173-4b7e-b5c9-d3ec8c7fbfce",
+      "text": "Please respond to each question or statement by clicking one box per question..",
+      "type": "display"
+    },
+    {
+      "linkId": "physical-function-group",
+      "text": "Physical Function",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "b091ae6a-6d84-4ec1-a62a-402715412985",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61597-1"
+            }
+          ],
+          "text": "Are you able to do chores such as vacuuming or yard work?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/f8390160-a5b9-4053-a279-aedb90c1ec19"
+        },
+        {
+          "linkId": "99121fe3-c393-4792-bb83-19902274106e",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61607-8"
+            }
+          ],
+          "text": "Are you able to go up and down stairs at a normal pace?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/f8390160-a5b9-4053-a279-aedb90c1ec19"
+        },
+        {
+          "linkId": "d2f827a2-2eb9-44dd-94d4-4c2000f151f0",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61609-4"
+            }
+          ],
+          "text": "Are you able to go for a walk of at least 15 minutes?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/f8390160-a5b9-4053-a279-aedb90c1ec19"
+        },
+        {
+          "linkId": "b0abc3fe-08d7-44d4-861c-a6e62ecaadce",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61635-9"
+            }
+          ],
+          "text": "Are you able to run errands and shop?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/f8390160-a5b9-4053-a279-aedb90c1ec19"
+        }
+      ]
+    },
+    {
+      "linkId": "physical-function-score-group",
+      "text": "Physical Function Score",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+              "valueExpression": {
+                "description": "Promis-33 Physical Function T-Score",
+                "language": "text/fhirpath",
+                "expression": "iif(QuestionnaireResponse.item.where(linkId.startsWith('physical-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 4, 22.5, iif(QuestionnaireResponse.item.where(linkId.startsWith('physical-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 5, 26.6, iif(QuestionnaireResponse.item.where(linkId.startsWith('physical-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 6, 28.9, iif(QuestionnaireResponse.item.where(linkId.startsWith('physical-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 7, 30.5, iif(QuestionnaireResponse.item.where(linkId.startsWith('physical-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 8, 31.9, iif(QuestionnaireResponse.item.where(linkId.startsWith('physical-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 9, 33.2, iif(QuestionnaireResponse.item.where(linkId.startsWith('physical-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 10, 34.4, iif(QuestionnaireResponse.item.where(linkId.startsWith('physical-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 11, 35.6, iif(QuestionnaireResponse.item.where(linkId.startsWith('physical-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 12, 36.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('physical-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 13, 37.9, iif(QuestionnaireResponse.item.where(linkId.startsWith('physical-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 14, 39.2, iif(QuestionnaireResponse.item.where(linkId.startsWith('physical-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 15, 40.5, iif(QuestionnaireResponse.item.where(linkId.startsWith('physical-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 16, 41.9, iif(QuestionnaireResponse.item.where(linkId.startsWith('physical-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 17, 43.5, iif(QuestionnaireResponse.item.where(linkId.startsWith('physical-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 18, 45.5, iif(QuestionnaireResponse.item.where(linkId.startsWith('physical-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 19, 48.3, iif(QuestionnaireResponse.item.where(linkId.startsWith('physical-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 20, 57.0, null)))))))))))))))))"
+              }
+            },
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-item-unit",
+              "valueCoding": {
+                "system": "https://unitsofmeasure.org",
+                "code": "Points"
+              }
+            },
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-answer-range",
+              "valueRange": {
+                "low": {
+                  "value": 0
+                },
+                "high": {
+                  "value": 100
+                }
+              }
+            }
+          ],
+          "linkId": "physical-function-t-score",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "71959-1",
+              "display": "PROMIS-33 Physical function T-Score"
+            }
+          ],
+          "text": "Physical Function T-Score",
+          "type": "decimal",
+          "readOnly": true
+        }
+      ]
+    },
+    {
+      "linkId": "anxiety-group",
+      "text": "Anxiety",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "feed250f-d4c7-49d2-93cc-1c0dd25dcc35",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61923-9"
+            }
+          ],
+          "text": "In the past 7 days… I felt fearful.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/30361213-e632-48ba-a9f0-aab218bcb5c2"
+        },
+        {
+          "linkId": "789dc818-3151-4c44-863f-faef6d3953a4",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61941-1"
+            }
+          ],
+          "text": "In the past 7 days… I found it hard to focus on anything other than my anxiety.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/30361213-e632-48ba-a9f0-aab218bcb5c2"
+        },
+        {
+          "linkId": "afaf7c43-e40c-46f7-bfb3-77e749048a85",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61942-9"
+            }
+          ],
+          "text": "In the past 7 days… My worries overwhelmed me.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/30361213-e632-48ba-a9f0-aab218bcb5c2"
+        },
+        {
+          "linkId": "e02b744c-dd47-43fe-8d17-3bf8ac470a76",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61949-4"
+            }
+          ],
+          "text": "In the past 7 days… I felt uneasy.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/30361213-e632-48ba-a9f0-aab218bcb5c2"
+        }
+      ]
+    },
+    {
+      "linkId": "anxiety-score-group",
+      "text": "Anxiety Score",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+              "valueExpression": {
+                "description": "Promis-33 Anxiety T-Score",
+                "language": "text/fhirpath",
+                "expression": "iif(QuestionnaireResponse.item.where(linkId.startsWith('anxiety-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 4, 40.3, iif(QuestionnaireResponse.item.where(linkId.startsWith('anxiety-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 5, 48.0, iif(QuestionnaireResponse.item.where(linkId.startsWith('anxiety-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 6, 51.2, iif(QuestionnaireResponse.item.where(linkId.startsWith('anxiety-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 7, 53.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('anxiety-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 8, 55.8, iif(QuestionnaireResponse.item.where(linkId.startsWith('anxiety-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 9, 57.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('anxiety-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 10, 59.5, iif(QuestionnaireResponse.item.where(linkId.startsWith('anxiety-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 11, 61.4, iif(QuestionnaireResponse.item.where(linkId.startsWith('anxiety-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 12, 63.4, iif(QuestionnaireResponse.item.where(linkId.startsWith('anxiety-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 13, 65.3, iif(QuestionnaireResponse.item.where(linkId.startsWith('anxiety-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 14, 67.3, iif(QuestionnaireResponse.item.where(linkId.startsWith('anxiety-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 15, 69.3, iif(QuestionnaireResponse.item.where(linkId.startsWith('anxiety-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 16, 71.2, iif(QuestionnaireResponse.item.where(linkId.startsWith('anxiety-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 17, 73.3, iif(QuestionnaireResponse.item.where(linkId.startsWith('anxiety-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 18, 75.4, iif(QuestionnaireResponse.item.where(linkId.startsWith('anxiety-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 19, 77.9, iif(QuestionnaireResponse.item.where(linkId.startsWith('anxiety-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 20, 81.6, null)))))))))))))))))"
+              }
+            },
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-item-unit",
+              "valueCoding": {
+                "system": "https://unitsofmeasure.org",
+                "code": "Points"
+              }
+            },
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-answer-range",
+              "valueRange": {
+                "low": {
+                  "value": 0
+                },
+                "high": {
+                  "value": 100
+                }
+              }
+            }
+          ],
+          "linkId": "anxiety-t-score",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "71967-4",
+              "display": "PROMIS-33 Anxiety score T-Score"
+            }
+          ],
+          "text": "Anxiety T-Score",
+          "type": "decimal",
+          "readOnly": true
+        }
+      ]
+    },
+    {
+      "linkId": "depression-group",
+      "text": "Depression",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "ce5fbd63-9b41-4f14-868a-fb865bc2fce1",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61953-6"
+            }
+          ],
+          "text": "In the past 7 days… I felt worthless.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/30361213-e632-48ba-a9f0-aab218bcb5c2"
+        },
+        {
+          "linkId": "5bfe884f-a212-450a-8775-c7101b7cd2b5",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61955-1"
+            }
+          ],
+          "text": "In the past 7 days… I felt helpless.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/30361213-e632-48ba-a9f0-aab218bcb5c2"
+        },
+        {
+          "linkId": "66122483-dbfe-4321-b77f-fcead6d83dfc",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61967-6"
+            }
+          ],
+          "text": "In the past 7 days… I felt depressed.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/30361213-e632-48ba-a9f0-aab218bcb5c2"
+        },
+        {
+          "linkId": "b53cb945-8596-49b8-aa3d-c50a1cdf6e32",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61973-4"
+            }
+          ],
+          "text": "In the past 7 days… I felt hopeless.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/30361213-e632-48ba-a9f0-aab218bcb5c2"
+        }
+      ]
+    },
+    {
+      "linkId": "depression-score-group",
+      "text": "Depression Score",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+              "valueExpression": {
+                "description": "Promis-33 Depression T-Score",
+                "language": "text/fhirpath",
+                "expression": "iif(QuestionnaireResponse.item.where(linkId.startsWith('depression-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 4, 41.0, iif(QuestionnaireResponse.item.where(linkId.startsWith('depression-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 5, 49.0, iif(QuestionnaireResponse.item.where(linkId.startsWith('depression-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 6, 51.8, iif(QuestionnaireResponse.item.where(linkId.startsWith('depression-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 7, 53.9, iif(QuestionnaireResponse.item.where(linkId.startsWith('depression-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 8, 55.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('depression-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 9, 57.3, iif(QuestionnaireResponse.item.where(linkId.startsWith('depression-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 10, 58.9, iif(QuestionnaireResponse.item.where(linkId.startsWith('depression-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 11, 60.5, iif(QuestionnaireResponse.item.where(linkId.startsWith('depression-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 12, 62.2, iif(QuestionnaireResponse.item.where(linkId.startsWith('depression-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 13, 63.9, iif(QuestionnaireResponse.item.where(linkId.startsWith('depression-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 14, 65.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('depression-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 15, 67.5, iif(QuestionnaireResponse.item.where(linkId.startsWith('depression-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 16, 69.4, iif(QuestionnaireResponse.item.where(linkId.startsWith('depression-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 17, 71.2, iif(QuestionnaireResponse.item.where(linkId.startsWith('depression-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 18, 73.3, iif(QuestionnaireResponse.item.where(linkId.startsWith('depression-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 19, 75.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('depression-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 20, 79.4, null)))))))))))))))))"
+              }
+            },
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-item-unit",
+              "valueCoding": {
+                "system": "https://unitsofmeasure.org",
+                "code": "Points"
+              }
+            },
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-answer-range",
+              "valueRange": {
+                "low": {
+                  "value": 0
+                },
+                "high": {
+                  "value": 100
+                }
+              }
+            }
+          ],
+          "linkId": "depression-t-score",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "71965-8",
+              "display": "PROMIS-33 Depression score T-Score"
+            }
+          ],
+          "text": "Depression T-Score",
+          "type": "decimal",
+          "readOnly": true
+        }
+      ]
+    },
+    {
+      "linkId": "fatigue-group",
+      "text": "Fatigue",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "5a4b771d-a06b-49eb-a702-a95eefe631ec",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61878-5"
+            }
+          ],
+          "text": "In the past 7 days… I feel fatigued.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/e8e0b70d-ed42-4549-b29c-69cff4f3f4e2"
+        },
+        {
+          "linkId": "23a32d7d-d2ef-4118-a86c-12b6a7ae52b0",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61882-7"
+            }
+          ],
+          "text": "In the past 7 days… I have trouble starting things because I am tired.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/e8e0b70d-ed42-4549-b29c-69cff4f3f4e2"
+        },
+        {
+          "linkId": "9648faca-ce2f-4508-9c1d-74939746a589",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61865-2"
+            }
+          ],
+          "text": "During the past 7 days… How run-down did you feel on average?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/e8e0b70d-ed42-4549-b29c-69cff4f3f4e2"
+        },
+        {
+          "linkId": "fc0cd66a-b698-403a-b03e-c769917f28bc",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61864-5"
+            }
+          ],
+          "text": "During the past 7 days… How fatigued were you on average?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/e8e0b70d-ed42-4549-b29c-69cff4f3f4e2"
+        }
+      ]
+    },
+    {
+      "linkId": "fatigue-score-group",
+      "text": "Fatigue Score",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+              "valueExpression": {
+                "description": "Promis-33 Fatigue T-Score",
+                "language": "text/fhirpath",
+                "expression": "iif(QuestionnaireResponse.item.where(linkId.startsWith('fatigue-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 4, 33.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('fatigue-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 5, 39.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('fatigue-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 6, 43.1, iif(QuestionnaireResponse.item.where(linkId.startsWith('fatigue-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 7, 46.0, iif(QuestionnaireResponse.item.where(linkId.startsWith('fatigue-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 8, 48.6, iif(QuestionnaireResponse.item.where(linkId.startsWith('fatigue-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 9, 51.0, iif(QuestionnaireResponse.item.where(linkId.startsWith('fatigue-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 10, 53.1, iif(QuestionnaireResponse.item.where(linkId.startsWith('fatigue-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 11, 55.1, iif(QuestionnaireResponse.item.where(linkId.startsWith('fatigue-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 12, 57.0, iif(QuestionnaireResponse.item.where(linkId.startsWith('fatigue-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 13, 58.8, iif(QuestionnaireResponse.item.where(linkId.startsWith('fatigue-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 14, 60.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('fatigue-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 15, 62.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('fatigue-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 16, 64.6, iif(QuestionnaireResponse.item.where(linkId.startsWith('fatigue-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 17, 66.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('fatigue-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 18, 69.0, iif(QuestionnaireResponse.item.where(linkId.startsWith('fatigue-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 19, 71.6, iif(QuestionnaireResponse.item.where(linkId.startsWith('fatigue-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 20, 75.8, null)))))))))))))))))"
+              }
+            },
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-item-unit",
+              "valueCoding": {
+                "system": "https://unitsofmeasure.org",
+                "code": "Points"
+              }
+            },
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-answer-range",
+              "valueRange": {
+                "low": {
+                  "value": 0
+                },
+                "high": {
+                  "value": 100
+                }
+              }
+            }
+          ],
+          "linkId": "fatigue-t-score",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "71963-3",
+              "display": "PROMIS-33 Fatigue score T-Score"
+            }
+          ],
+          "text": "Fatigue T-Score",
+          "type": "decimal",
+          "readOnly": true
+        }
+      ]
+    },
+    {
+      "linkId": "sleep-disturbance-group",
+      "text": "Sleep Disturbance",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "37eefdf5-abd5-4df6-9f6f-e92c243dbb1a",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61987-4"
+            }
+          ],
+          "text": "In the past 7 days… My sleep quality was",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/5248159c-018c-4220-9acb-7591492f7362"
+        },
+        {
+          "linkId": "cf8711be-f1a9-4a6d-9020-1dc91c261048",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61986-6"
+            }
+          ],
+          "text": "In the past 7 days… My sleep was refreshing.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/30361213-e632-48ba-a9f0-aab218bcb5c2"
+        },
+        {
+          "linkId": "5aa9c51d-f75f-4b47-9534-212054b4885f",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61998-1"
+            }
+          ],
+          "text": "In the past 7 days… I had a problem with my sleep.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/e8e0b70d-ed42-4549-b29c-69cff4f3f4e2"
+        },
+        {
+          "linkId": "5301679b-39d8-4da1-b22e-c69d9a5760e7",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61999-9"
+            }
+          ],
+          "text": "In the past 7 days… I had difficulty falling asleep.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/e8e0b70d-ed42-4549-b29c-69cff4f3f4e2"
+        }
+      ]
+    },
+    {
+      "linkId": "sleep-disturbance-score-group",
+      "text": "Sleep Disturbance Score",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+              "valueExpression": {
+                "description": "Promis-33 Sleep Disturbance T-Score",
+                "language": "text/fhirpath",
+                "expression": "iif(QuestionnaireResponse.item.where(linkId.startsWith('sleep-disturbance-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 4, 32.0, iif(QuestionnaireResponse.item.where(linkId.startsWith('sleep-disturbance-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 5, 37.5, iif(QuestionnaireResponse.item.where(linkId.startsWith('sleep-disturbance-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 6, 41.1, iif(QuestionnaireResponse.item.where(linkId.startsWith('sleep-disturbance-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 7, 43.8, iif(QuestionnaireResponse.item.where(linkId.startsWith('sleep-disturbance-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 8, 46.2, iif(QuestionnaireResponse.item.where(linkId.startsWith('sleep-disturbance-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 9, 48.4, iif(QuestionnaireResponse.item.where(linkId.startsWith('sleep-disturbance-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 10, 50.5, iif(QuestionnaireResponse.item.where(linkId.startsWith('sleep-disturbance-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 11, 52.4, iif(QuestionnaireResponse.item.where(linkId.startsWith('sleep-disturbance-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 12, 54.3, iif(QuestionnaireResponse.item.where(linkId.startsWith('sleep-disturbance-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 13, 56.1, iif(QuestionnaireResponse.item.where(linkId.startsWith('sleep-disturbance-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 14, 57.9, iif(QuestionnaireResponse.item.where(linkId.startsWith('sleep-disturbance-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 15, 59.8, iif(QuestionnaireResponse.item.where(linkId.startsWith('sleep-disturbance-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 16, 61.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('sleep-disturbance-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 17, 63.8, iif(QuestionnaireResponse.item.where(linkId.startsWith('sleep-disturbance-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 18, 66.0, iif(QuestionnaireResponse.item.where(linkId.startsWith('sleep-disturbance-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 19, 68.8, iif(QuestionnaireResponse.item.where(linkId.startsWith('sleep-disturbance-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 20, 73.3, null)))))))))))))))))"
+              }
+            },
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-item-unit",
+              "valueCoding": {
+                "system": "https://unitsofmeasure.org",
+                "code": "Points"
+              }
+            },
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-answer-range",
+              "valueRange": {
+                "low": {
+                  "value": 0
+                },
+                "high": {
+                  "value": 100
+                }
+              }
+            }
+          ],
+          "linkId": "sleep-disturbance-t-score",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "71955-9",
+              "display": "PROMIS-33 Sleep disturbance score T-Score"
+            }
+          ],
+          "text": "Sleep Disturbance T-Score",
+          "type": "decimal",
+          "readOnly": true
+        }
+      ]
+    },
+    {
+      "linkId": "social-ability-group",
+      "text": "Ability to Participate in Social Roles and Activities",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "19ab4386-890c-4ac6-b739-dbecdfa1d3b8",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "76837-4"
+            }
+          ],
+          "text": "I have trouble doing all of my regular leisure activities with others.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/30361213-e632-48ba-a9f0-aab218bcb5c2"
+        },
+        {
+          "linkId": "513609ed-0d3c-404f-94b2-1a4701733622",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "76708-7"
+            }
+          ],
+          "text": "I have trouble doing all of the family activities that I want to do.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/30361213-e632-48ba-a9f0-aab218bcb5c2"
+        },
+        {
+          "linkId": "b31f77cd-597a-4791-8cd0-223016b277d6",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "76839-0"
+            }
+          ],
+          "text": "I have trouble doing all of my usual work (include work at home).",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/30361213-e632-48ba-a9f0-aab218bcb5c2"
+        },
+        {
+          "linkId": "3100da29-df22-4b24-9e21-b46bde5d999b",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "76712-9"
+            }
+          ],
+          "text": "I have trouble doing all of the activities with friends that I want to do.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/e8e0b70d-ed42-4549-b29c-69cff4f3f4e2"
+        }
+      ]
+    },
+    {
+      "linkId": "social-ability-score-group",
+      "text": "Social Ability Score",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+              "valueExpression": {
+                "description": "Promis-33 Social Ability T-Score",
+                "language": "text/fhirpath",
+                "expression": "iif(QuestionnaireResponse.item.where(linkId.startsWith('social-ability-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 4, 27.5, iif(QuestionnaireResponse.item.where(linkId.startsWith('social-ability-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 5, 31.8, iif(QuestionnaireResponse.item.where(linkId.startsWith('social-ability-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 6, 34.0, iif(QuestionnaireResponse.item.where(linkId.startsWith('social-ability-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 7, 35.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('social-ability-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 8, 37.3, iif(QuestionnaireResponse.item.where(linkId.startsWith('social-ability-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 9, 38.8, iif(QuestionnaireResponse.item.where(linkId.startsWith('social-ability-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 10, 40.5, iif(QuestionnaireResponse.item.where(linkId.startsWith('social-ability-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 11, 42.3, iif(QuestionnaireResponse.item.where(linkId.startsWith('social-ability-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 12, 44.2, iif(QuestionnaireResponse.item.where(linkId.startsWith('social-ability-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 13, 46.2, iif(QuestionnaireResponse.item.where(linkId.startsWith('social-ability-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 14, 48.1, iif(QuestionnaireResponse.item.where(linkId.startsWith('social-ability-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 15, 50.0, iif(QuestionnaireResponse.item.where(linkId.startsWith('social-ability-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 16, 51.9, iif(QuestionnaireResponse.item.where(linkId.startsWith('social-ability-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 17, 53.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('social-ability-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 18, 55.8, iif(QuestionnaireResponse.item.where(linkId.startsWith('social-ability-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 19, 58.3, iif(QuestionnaireResponse.item.where(linkId.startsWith('social-ability-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 20, 64.2, null)))))))))))))))))"
+              }
+            },
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-item-unit",
+              "valueCoding": {
+                "system": "https://unitsofmeasure.org",
+                "code": "Points"
+              }
+            },
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-answer-range",
+              "valueRange": {
+                "low": {
+                  "value": 0
+                },
+                "high": {
+                  "value": 100
+                }
+              }
+            }
+          ],
+          "linkId": "social-ability-t-score",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "71957-5",
+              "display": "PROMIS-33 Satisfaction with participation in social roles score T-Score"
+            }
+          ],
+          "text": "Social Ability T-Score",
+          "type": "decimal",
+          "readOnly": true
+        }
+      ]
+    },
+    {
+      "linkId": "pain-interference-group",
+      "text": "Pain Interference",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "c0cc463e-0067-43e1-b924-7d9d2d1e2500",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61758-9"
+            }
+          ],
+          "text": "In the past 7 days... How much did pain interfere with your day to day activities?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/e8e0b70d-ed42-4549-b29c-69cff4f3f4e2"
+        },
+        {
+          "linkId": "35b48d29-3aff-4d79-916c-259084c326a5",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61769-6"
+            }
+          ],
+          "text": "In the past 7 days... How much did pain interfere with work around the home?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/e8e0b70d-ed42-4549-b29c-69cff4f3f4e2"
+        },
+        {
+          "linkId": "244f5320-7ee6-46d0-9fdb-4e421911951a",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61773-8"
+            }
+          ],
+          "text": "In the past 7 days... How much did pain interfere with your ability to participate in social activities?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/e8e0b70d-ed42-4549-b29c-69cff4f3f4e2"
+        },
+        {
+          "linkId": "9a1e46c6-57a3-40a6-83c7-f43c95c22e8f",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61775-3"
+            }
+          ],
+          "text": "In the past 7 days... How much did pain interfere with your household chores?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/e8e0b70d-ed42-4549-b29c-69cff4f3f4e2"
+        }
+      ]
+    },
+    {
+      "linkId": "pain-interference-score-group",
+      "text": "Pain Interference Score",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+              "valueExpression": {
+                "description": "Promis-33 Pain Interference T-Score",
+                "language": "text/fhirpath",
+                "expression": "iif(QuestionnaireResponse.item.where(linkId.startsWith('pain-interference-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 4, 41.6, iif(QuestionnaireResponse.item.where(linkId.startsWith('pain-interference-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 5, 49.6, iif(QuestionnaireResponse.item.where(linkId.startsWith('pain-interference-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 6, 52.0, iif(QuestionnaireResponse.item.where(linkId.startsWith('pain-interference-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 7, 53.9, iif(QuestionnaireResponse.item.where(linkId.startsWith('pain-interference-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 8, 55.6, iif(QuestionnaireResponse.item.where(linkId.startsWith('pain-interference-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 9, 57.1, iif(QuestionnaireResponse.item.where(linkId.startsWith('pain-interference-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 10, 58.5, iif(QuestionnaireResponse.item.where(linkId.startsWith('pain-interference-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 11, 59.9, iif(QuestionnaireResponse.item.where(linkId.startsWith('pain-interference-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 12, 61.2, iif(QuestionnaireResponse.item.where(linkId.startsWith('pain-interference-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 13, 62.5, iif(QuestionnaireResponse.item.where(linkId.startsWith('pain-interference-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 14, 63.8, iif(QuestionnaireResponse.item.where(linkId.startsWith('pain-interference-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 15, 65.2, iif(QuestionnaireResponse.item.where(linkId.startsWith('pain-interference-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 16, 66.6, iif(QuestionnaireResponse.item.where(linkId.startsWith('pain-interference-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 17, 68.0, iif(QuestionnaireResponse.item.where(linkId.startsWith('pain-interference-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 18, 69.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('pain-interference-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 19, 71.6, iif(QuestionnaireResponse.item.where(linkId.startsWith('pain-interference-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 20, 75.6, null)))))))))))))))))"
+              }
+            },
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-item-unit",
+              "valueCoding": {
+                "system": "https://unitsofmeasure.org",
+                "code": "Points"
+              }
+            },
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-answer-range",
+              "valueRange": {
+                "low": {
+                  "value": 0
+                },
+                "high": {
+                  "value": 100
+                }
+              }
+            }
+          ],
+          "linkId": "pain-interference-t-score",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "71961-7",
+              "display": "PROMIS-33 Pain interference score T-Score"
+            }
+          ],
+          "text": "Pain Interference T-Score",
+          "type": "decimal",
+          "readOnly": true
+        }
+      ]
+    },
+    {
+      "linkId": "pain-intensity-group",
+      "text": "Pain Intensity",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-answer-range",
+              "valueRange": {
+                "low": {
+                  "value": 0
+                },
+                "high": {
+                  "value": 10
+                }
+              }
+            },
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-slider-valueset",
+              "valueUrl": "https://dotbase.org/fhir/ValueSet/377b47bb-d2d3-46bb-ac69-253bf44ab5cf"
+            }
+          ],
+          "linkId": "07855a30-7b9f-456e-8d01-97efab5268bc",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "61583-1"
+            }
+          ],
+          "text": "How would you rate your pain of the past 7 days on average from 0 (no pain) to 10 (worst pain imaginable)?",
+          "type": "integer",
+          "required": true,
+          "_type": {
+            "extension": [
+              {
+                "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-item-type",
+                "valueCode": "slider"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "cognitive-function-group",
+      "text": "Cognitive Function",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "0fe4e618-3bb5-4aaa-b45a-0fa64de9b1f4",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "Indent81461-6"
+            }
+          ],
+          "text": "In the past 7 days… My thinking has been slow.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/e8e0b70d-ed42-4549-b29c-69cff4f3f4e2"
+        },
+        {
+          "linkId": "42e7f814-1a31-4b0e-ac8e-5cdcfa7c0fe5",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "81478-0"
+            }
+          ],
+          "text": "In the past 7 days… It has seemed like my brain was not working as well as usual.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/e8e0b70d-ed42-4549-b29c-69cff4f3f4e2"
+        },
+        {
+          "linkId": "c26471c6-c259-461b-9738-f3af87f1a02f",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "81479-8"
+            }
+          ],
+          "text": "In the past 7 days… I have had to work harder than usual to keep track of what I was doing.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/e8e0b70d-ed42-4549-b29c-69cff4f3f4e2"
+        },
+        {
+          "linkId": "a9e378c1-cb26-4707-95bd-69efc653986a",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "81485-5"
+            }
+          ],
+          "text": "In the past 7 days… I have had trouble shifting back and forth between different activities that require thinking.",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "https://dotbase.org/fhir/ValueSet/e8e0b70d-ed42-4549-b29c-69cff4f3f4e2"
+        }
+      ]
+    },
+    {
+      "linkId": "cognitive-function-score-group",
+      "text": "Cognitive Function Score",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+              "valueExpression": {
+                "description": "Promis-33 Cognitive Function T-Score",
+                "language": "text/fhirpath",
+                "expression": "iif(QuestionnaireResponse.item.where(linkId.startsWith('cognitive-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 4, 33.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('cognitive-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 5, 39.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('cognitive-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 6, 43.1, iif(QuestionnaireResponse.item.where(linkId.startsWith('cognitive-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 7, 46.0, iif(QuestionnaireResponse.item.where(linkId.startsWith('cognitive-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 8, 48.6, iif(QuestionnaireResponse.item.where(linkId.startsWith('cognitive-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 9, 51.0, iif(QuestionnaireResponse.item.where(linkId.startsWith('cognitive-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 10, 53.1, iif(QuestionnaireResponse.item.where(linkId.startsWith('cognitive-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 11, 55.1, iif(QuestionnaireResponse.item.where(linkId.startsWith('cognitive-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 12, 57.0, iif(QuestionnaireResponse.item.where(linkId.startsWith('cognitive-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 13, 58.8, iif(QuestionnaireResponse.item.where(linkId.startsWith('cognitive-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 14, 60.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('cognitive-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 15, 62.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('cognitive-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 16, 64.6, iif(QuestionnaireResponse.item.where(linkId.startsWith('cognitive-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 17, 66.7, iif(QuestionnaireResponse.item.where(linkId.startsWith('cognitive-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 18, 69.0, iif(QuestionnaireResponse.item.where(linkId.startsWith('cognitive-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 19, 71.6, iif(QuestionnaireResponse.item.where(linkId.startsWith('cognitive-function-group')).repeat(item).answer.children().select(extension.where(url='https://dotbase.org/fhir/StructureDefinition/coding-score-value').valueString.toInteger()).aggregate($this - (-$total), 0) = 20, 75.8, null)))))))))))))))))"
+              }
+            },
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-item-unit",
+              "valueCoding": {
+                "system": "https://unitsofmeasure.org",
+                "code": "Points"
+              }
+            },
+            {
+              "url": "https://dotbase.org/fhir/StructureDefinition/questionnaire-answer-range",
+              "valueRange": {
+                "low": {
+                  "value": 0
+                },
+                "high": {
+                  "value": 100
+                }
+              }
+            }
+          ],
+          "linkId": "cognitive-function-t-score",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "81538-1",
+              "display": "PROMIS-33 Cognitive function score T-Score"
+            }
+          ],
+          "text": "Cognitive Function T-Score",
+          "type": "decimal",
+          "readOnly": true
+        }
+      ]
+    },
+    {
+      "linkId": "6aebf707-2bb5-4d57-849c-77f211ae6513",
+      "text": "Consent to Follow-Ups",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "649b1527-9a48-4f74-bc1f-04b099af3b25",
+          "text": "Your well-being remains important to us even after your treatment. We would be pleased if you allow us to stay in touch. Your feedback helps us continuously improve the quality of our care. I consent to being contacted by Charité for follow-up surveys. I can revoke this consent at any time without giving reasons.",
+          "type": "boolean",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

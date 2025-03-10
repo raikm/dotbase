@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  modules: ['@primevue/nuxt-module', '@nuxt/eslint'],
+  modules: ['@primevue/nuxt-module', '@nuxt/eslint', '@nuxt/test-utils/module'],
   primevue: {
     options: {
       theme: {
