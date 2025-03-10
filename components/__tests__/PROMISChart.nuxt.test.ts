@@ -26,20 +26,20 @@ describe('PROMISChart', () => {
     const component = await mountSuspended(PROMISChart, {
       props: {
         selectedQuestionnaireResponse: responseTestData,
-        modelValue: 'chartData',
       },
     })
+
+    await nextTick()
+
+    expect(component.html()).toContain('canvas')
+    expect(component.vm.chartData).toBeDefined()
+
     // FIXME: why spy doesn't work
     // const setChartDataSpy = vi.spyOn(component.vm, 'setChartData')
     // const createChartDiagramBasedOnResponsesSpy = vi.spyOn(
     //   component.vm,
     //   'createChartDiagramBasedOnResponses',
     // )
-
-    await nextTick()
-
-    expect(component.html()).toContain('canvas')
-    expect(component.vm.chartData).toBeDefined()
 
     /* FIXME why component.vm.chartData.value is undefined
 

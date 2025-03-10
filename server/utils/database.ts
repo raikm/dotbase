@@ -9,7 +9,6 @@ interface Database {
   questionnaires: Questionnaire[]
 }
 
-// TODO verify if cleanest way to get the path with this conditions
 const questionnaireResponsesDir = path.join(
   process.cwd(),
   'server/fhir/QuestionnaireResponses',

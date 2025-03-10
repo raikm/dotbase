@@ -22,6 +22,16 @@ const { selectedQuestionnaireResponse } = defineProps<{
 const chartData = ref()
 const chartOptions = ref()
 
+const getQuestionnaire = async () => {
+  try {
+    return await $fetch<Questionnaire>(
+      `/api/questionnaires/${route.params.questionnaireId}`,
+    )
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 onMounted(async () => {
   await createChartDiagramBasedOnResponses()
 })
@@ -52,16 +62,6 @@ const createChartDiagramBasedOnResponses = async () => {
   }
 }
 
-const getQuestionnaire = async () => {
-  try {
-    return await $fetch<Questionnaire>(
-      `/api/questionnaires/${route.params.questionnaireId}`,
-    )
-  } catch (error) {
-    console.error(error)
-  }
-}
-
 const processScoreResultsFromQuestionnaireResponse = async (
   questionnaire: Questionnaire,
 ) => {
@@ -75,7 +75,7 @@ const processScoreResultsFromQuestionnaireResponse = async (
     const invertedScores = ['71959-1'] // Physical Function Score LOINC
     return invertedScores.includes(loincCode)
   }
-
+  // TODO get relevant LOINC-Codes from loinc.org/62337-1 to match them with selectedQuestionnaireResponse items
   const scoreGroups = (await fhirpath.evaluate(
     questionnaire,
     "item.where(type='group' and linkId.endsWith('-score-group'))",
@@ -86,7 +86,6 @@ const processScoreResultsFromQuestionnaireResponse = async (
 
   for (const scoreGroup of scoreGroups) {
     if (scoreGroup.item != undefined) {
-      // TODO get relevant LOINC-Codes from loinc.org/62337-1 to match them with selectedQuestionnaireResponse items
       const scoreValue = (await fhirpath.evaluate(
         selectedQuestionnaireResponse,
         `item.where(linkId='${scoreGroup.linkId}').item.where(linkId='${scoreGroup.item[0].linkId}').answer.valueDecimal`,
