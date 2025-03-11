@@ -62,41 +62,33 @@ const createChartDiagramBasedOnResponses = async () => {
   }
 }
 
+// TODO catch errors if processing fails
 const processScoreResultsFromQuestionnaireResponse = async (
   questionnaire: Questionnaire,
 ) => {
   if (!questionnaire) return
 
-  // TODO chatch error if processing fails
-
-  // Quick workaround to check if the score is inverted based on LOINC code
-  const isInverted = (loincCode?: string): boolean => {
-    if (!loincCode) return false
-    const invertedScores = ['71959-1'] // Physical Function Score LOINC
-    return invertedScores.includes(loincCode)
-  }
-  // TODO get relevant LOINC-Codes from loinc.org/62337-1 to match them with selectedQuestionnaireResponse items
   const scoreGroups = (await fhirpath.evaluate(
     questionnaire,
     "item.where(type='group' and linkId.endsWith('-score-group'))",
   )) as QuestionnaireItem[]
 
   const scoreGroupResults: number[] = []
-  // TODO room for improvement: if scoreGroup in response not found or value not exist then don't include score in diagram -> solve with a collection
 
   for (const scoreGroup of scoreGroups) {
-    if (scoreGroup.item != undefined) {
-      const scoreValue = (await fhirpath.evaluate(
-        selectedQuestionnaireResponse,
-        `item.where(linkId='${scoreGroup.linkId}').item.where(linkId='${scoreGroup.item[0].linkId}').answer.valueDecimal`,
-      )) as number[]
+    if (scoreGroup.item == undefined) continue
 
-      if (isInverted(scoreGroup.item![0].code![0].code)) {
-        scoreValue[0] = 100 - scoreValue[0]
-      }
+    // get linked score value based on the defined linkId in questionnaire
+    const scoreValue = (await fhirpath.evaluate(
+      selectedQuestionnaireResponse,
+      `item.where(linkId='${scoreGroup.linkId}').item.where(linkId='${scoreGroup.item[0].linkId}').answer.valueDecimal`,
+    )) as number[]
 
-      scoreGroupResults.push(scoreValue[0])
+    if (isInverted(scoreGroup.item![0].code![0].code)) {
+      scoreValue[0] = 100 - scoreValue[0]
     }
+
+    scoreGroupResults.push(scoreValue[0])
   }
 
   setChartData(
@@ -104,6 +96,13 @@ const processScoreResultsFromQuestionnaireResponse = async (
     scoreGroupResults,
     questionnaire.description,
   )
+}
+
+// workaround to check if the score is inverted based on LOINC code
+const isInverted = (loincCode?: string): boolean => {
+  if (!loincCode) return false
+  const invertedScores = ['71959-1'] // Physical Function Score LOINC
+  return invertedScores.includes(loincCode)
 }
 
 const setChartData = (
